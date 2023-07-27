@@ -9,3 +9,11 @@
   box-sizing: border-box;
   transition: all 0.3s;
 }
+
+.clicked{
+  color: #ffc451;
+}
+
+.active{
+  color: #ffc451;
+}
