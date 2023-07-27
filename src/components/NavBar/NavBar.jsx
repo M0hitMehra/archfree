@@ -1,19 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 const NavBar = () => {
   const [selectedItem, setSelectItem] = useState(0);
+  const [scrolling, setScrolling] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Add a scroll event listener and update the "scrolling" state
+      if (window.scrollY > 0) {
+        setScrolling(true); // If scrolling down, set the "scrolling" state to true
+      } else {
+        setScrolling(false); // If at the top, set the "scrolling" state to false
+      }
+    };
+
+    // Add the scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);  
   return (
-    <div className=" fixed  w-full ">
-      <nav className="flex  w-full  justify-between items-center h-[5rem] px-24 bg-[#0e1629] py-4">
+    <div className={`fixed w-full ${scrolling ? 'bg-[#0e1629] py-4' : 'bg-transparent'} `}>
+      <nav className={`flex  w-full  justify-between items-center h-[4rem] px-24  ${scrolling ? 'bg-[#0e1629] py-4' : 'bg-transparent'} py-41`}>
         <div className="logo text-white">Logo</div>
         <div className={`navLinks w-96 flex justify-between text-white`}>
-          {/* <Link to={"/"} className={`home hover:text-[#ffc451]`}>Home</Link>
-          <Link to={"/about"} className={`about hover:text-[#ffc451]`}>About Us</Link>
-          <Link to={"/team"} className={`team hover:text-[#ffc451]`}>Our Team</Link>
-          <Link to={"/career"} className={`career hover:text-[#ffc451]`}>Career</Link>
-          <Link to={"/contact"} className={`contact hover:text-[#ffc451]`}>Contact Us</Link> */}
+    
           <Link
             className={`link ${selectedItem === 0 ? "active" : ""}`}
             to="/"
@@ -56,3 +71,6 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
+
