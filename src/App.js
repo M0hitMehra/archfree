@@ -1,11 +1,17 @@
- import './App.css';
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
-  
   return (
-    <div className={`h-screen w-screen bg-blue-500 flex items-center justify-center font-semibold text-3xl`}>
-     Hello World for the tester branch
-    </div>
+    <>
+      <NavBar />
+      <Routes>
+      <Route path="/" element={<NavBar />} />
+      <Route path="/" element={<NavBar />} />
+      <Route path="/" element={<NavBar />} />
+      </Routes>
+    </>
   );
 }
 
