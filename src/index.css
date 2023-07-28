@@ -7,20 +7,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-<<<<<<< Updated upstream
-  transition: all 0.3s;
-  /* background-image: url("https://www.thearchertechnology.com/public/frontend/img/blake-connally-B3l0g6HLxr8-unsplash.webp"); */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;           
-
-
-=======
-  /* transition: all 0.3s; */
->>>>>>> Stashed changes
+  background-attachment: fixed;
+ 
 }
 
-.navbar{
+.navbar {
   box-shadow: rgba(3, 101, 214, 0.544) 0px 0px 0px 3px;
 }
 
@@ -28,9 +21,10 @@
   width: 100%;
   height: 100vh;
   background: url(https://www.thearchertechnology.com/public/frontend/img/blake-connally-B3l0g6HLxr8-unsplash.webp) top center;
-   background-size: cover;
+  background-size: cover;
   position: relative;
 }
+
 /* section{
   padding: 60px 0;
   overflow: hidden;
