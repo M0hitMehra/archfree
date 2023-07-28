@@ -9,12 +9,12 @@ const Home = () => {
   
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { y: "100rem" },
     visible: {
-      opacity: 1,
+      y: 0,
       transition: {
         duration: 1,
-        repeat: Infinity, // Set to loop indefinitely
+        // repeat: Infinity, // Set to loop indefinitely
         repeatType: 'reverse', // Reverse the animation when it repeats
       },
     },
