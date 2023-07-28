@@ -16,19 +16,24 @@ const NavBar = () => {
     };
 
     // Add the scroll event listener when the component mounts
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Clean up the event listener when the component unmounts
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);  
+  }, []);
   return (
-    <div className={`navbar fixed z-10 w-full  ${true ? 'bg-[#0e1629] h-[5rem]' : 'bg-transparent'} `}>
-      <nav className={`flex  w-full  justify-between items-center h-[4rem] px-24   py-41`}>
+    <div
+      className={`navbar fixed z-10 w-full mb-[5rem] ${
+        true ? "bg-[#0e1629] h-[5rem]" : "bg-transparent"
+      } `}
+    >
+      <nav
+        className={`flex  w-full  justify-between items-center h-[4rem] px-24   py-41`}
+      >
         <div className="logo text-white">Logo</div>
         <div className={`navLinks w-96 flex justify-between text-white`}>
-    
           <Link
             className={`link ${selectedItem === 0 ? "active" : ""}`}
             to="/"
@@ -71,6 +76,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-
-
