@@ -15,16 +15,10 @@
     max-width: 90%;
     height: auto;
 }
-.heading{
-    font-weight: 700;
-    font-size: 28px;
-    font-family: "Poppins", sans-serif;
-    color: #444444;
+
+.img_about{
+    width:43%;
 }
-.content{
-    font-size: 1rem;
-    font-family: "Open Sans", sans-serif;
-    color:#2e2e2e;
-    font-weight: 100;
-    margin-top: 20px;
+.text_about{
+    width:50%;
 }

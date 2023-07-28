@@ -1,4 +1,6 @@
 import React from "react";
+import { BiCubeAlt } from "react-icons/bi";
+import { PiScrollDuotone } from "react-icons/pi";
 import "../../styles/About.css";
 const About = () => {
   return (
@@ -26,8 +28,8 @@ const About = () => {
       </h2>
       <div className="row_About ">
         <div className="About_text">
-          <h3 className="heading">ABOUT TO ARCHER</h3>
-          <p className="content">
+          <h3 className="text-3xl font-bold  text-white">ABOUT TO ARCHER</h3>
+          <p className="text-slate-400  font-medium mt-6">
             The Archer Technology is leading software development company in
             India that offers innovative and creative software solutions for
             small enterprises to large organization for their digital
@@ -35,17 +37,17 @@ const About = () => {
             Customers to turn them into most successful high performance
             Organizations.
           </p>
-          <p className="content">
+          <p className="text-slate-400  font-medium mt-6">
             We have team Of developers that have years of experience and
             expertise to develop high performing solutions and produce the
             desired solution for your business.
           </p>
-          <p className="content">
+          <p className="text-slate-400  font-medium mt-6">
             Archer Technology offering services on Web Development, App
             Development, ERP & CRM, Graphics Designing, Digital marketing and
             Web Hosting.
           </p>
-          <p className="content">
+          <p className="text-slate-400  font-medium mt-6">
             The high quality output of our services and solutions makes us
             inspired and committed to produce better and better solutions for
             our customers. Our main aim is customer satisfaction. customer comes
@@ -58,6 +60,109 @@ const About = () => {
             alt="react logo"
             className="image-fluid"
           />
+        </div>
+      </div>
+
+      <div className="flex justify-between mt-20">
+        <img
+          src="https://www.thearchertechnology.com/public/frontend/img/features.jpg"
+          alt="react logo"
+          className="img_about"
+        />
+        <div className="text_about">
+          <h1 className="text-3xl font-bold flex text-white">
+            <i className="text-4xl text-yellow-400  ">
+              <PiScrollDuotone />
+            </i>
+            Our Mission
+          </h1>
+          <p className="text-slate-400 text-xl ml-10">
+            Every software product that we develop is built with assured quality
+            and exhibits excellence in its core aspects.We ensure that our
+            clients get what they need to fulfill their aims.
+          </p>
+          <h1 className="text-3xl font-bold flex text-white mt-10">
+            <i className=" ">
+              <BiCubeAlt className="text-4xl text-yellow-400" />
+            </i>
+            Our Vision
+          </h1>
+          <p className="text-slate-400 text-xl ml-10">
+            we analyze your future business challenges and develop creative and
+            innovative digital solutions to encounter every problems arises in
+            business with easiness for you to enjoy streamlined business
+            operations.
+          </p>
+        </div>
+      </div>
+
+      <div className="flex justify-center items-center mt-20 flex-col">
+        <h1 className="text-5xl font-bold flex text-white ">
+          Our Development Process
+        </h1>
+        <img
+          src="https://www.thearchertechnology.com/public/frontend/img/Software-Process-for-Project-Development.png"
+          alt="Loading"
+          className="mt-20"
+        />
+      </div>
+
+      <div className="flex justify-between mt-20">
+        <div className="m-3">
+          <h1 className="text-2xl font-bold  text-white">
+            Specification Requirement
+          </h1>
+          <p className="text-slate-400  font-medium mt-4">
+            This stage is about the research of overall requirements and the
+            target audience of the website. This helps plan the best strategy
+            for project management.
+          </p>
+        </div>
+        <div className="m-3">
+          <h1 className="text-2xl font-bold  text-white">
+            Wireframe and Design
+          </h1>
+          <p className="text-slate-400  font-medium mt-4">
+            Next, we Wireframe and design the interface of your app that will
+            represent the appearance and user experience of your app to the
+            end-user.
+          </p>
+        </div>
+        <div className="m-3">
+          <h1 className="text-2xl font-bold  text-white">
+            Architecture and Database Design
+          </h1>
+          <p className="text-slate-400  font-medium mt-4">
+            In This stage We design architecture and database, Divides your
+            information into subject-based tables to reduce redundant data and
+            how database tables interacting each other.
+          </p>
+        </div>
+      </div>
+      <div className="flex justify-between mt-6">
+        <div className="m-3">
+          <h1 className="text-2xl font-bold  text-white">Development</h1>
+          <p className="text-slate-400  font-medium mt-4">
+            This stage is about the research of overall requirements and the
+            target audience of the website. This helps plan the best strategy
+            for project management.
+          </p>
+        </div>
+        <div className="m-3">
+          <h1 className="text-2xl font-bold  text-white">Testing</h1>
+          <p className="text-slate-400  font-medium mt-4">
+            Next, we Wireframe and design the interface of your app that will
+            represent the appearance and user experience of your app to the
+            end-user.
+          </p>
+        </div>
+        <div className="m-3">
+          <h1 className="text-2xl font-bold  text-white">Deployment</h1>
+          <p className="text-slate-400  font-medium mt-4">
+            In This stage We design architecture and database, Divides your
+            information into subject-based tables to reduce redundant data and
+            how database tables interacting each other..
+          </p>
         </div>
       </div>
     </div>
