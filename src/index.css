@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+<<<<<<< Updated upstream
   transition: all 0.3s;
   /* background-image: url("https://www.thearchertechnology.com/public/frontend/img/blake-connally-B3l0g6HLxr8-unsplash.webp"); */
   background-size: cover;
@@ -14,13 +15,63 @@
   background-attachment: fixed;           
 
 
+=======
+  /* transition: all 0.3s; */
+>>>>>>> Stashed changes
 }
 
+.navbar{
+  box-shadow: rgba(3, 101, 214, 0.544) 0px 0px 0px 3px;
+}
 
-.clicked{
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url(https://www.thearchertechnology.com/public/frontend/img/blake-connally-B3l0g6HLxr8-unsplash.webp) top center;
+   background-size: cover;
+  position: relative;
+}
+/* section{
+  padding: 60px 0;
+  overflow: hidden;
+} */
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  filter: brightness(100%) !important;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero h2 {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 10px 0 0 0;
+  font-size: 24px;
+  filter: brightness(100%) !important;
+}
+
+.clicked {
   color: #ffc451;
 }
 
-.active{
+.active {
   color: #ffc451;
 }

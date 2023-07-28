@@ -24,8 +24,8 @@ const NavBar = () => {
     };
   }, []);  
   return (
-    <div className={`fixed w-full ${scrolling ? 'bg-[#0e1629] py-4' : 'bg-transparent'} `}>
-      <nav className={`flex  w-full  justify-between items-center h-[4rem] px-24  ${scrolling ? 'bg-[#0e1629] py-4' : 'bg-transparent'} py-41`}>
+    <div className={`navbar fixed z-10 w-full  ${true ? 'bg-[#0e1629] h-[5rem]' : 'bg-transparent'} `}>
+      <nav className={`flex  w-full  justify-between items-center h-[4rem] px-24   py-41`}>
         <div className="logo text-white">Logo</div>
         <div className={`navLinks w-96 flex justify-between text-white`}>
     

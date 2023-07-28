@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <div className="pt-[5rem]">
+      <div className=" bg-[#0e192d]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
