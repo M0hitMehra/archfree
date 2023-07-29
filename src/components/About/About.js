@@ -295,7 +295,7 @@ const About = () => {
 
           <div className="flex flex-col mt-14 mb-14">
             <h1 className="text-white mt-4">Quick Links</h1>
-            <p className="text-white flex  items-center mt-4">
+            <p className="text-white flex  items-center mt-4 hover:text-yellow-400  cursor-pointer">
               <svg
                 className="w-3 h-2 text-yellow-400 dark:text-white mr-2"
                 aria-hidden="true"
@@ -313,7 +313,7 @@ const About = () => {
               </svg>
               Home
             </p>
-            <p className="text-white flex  items-center mt-4">
+            <p className="text-white flex  items-center mt-4 hover:text-yellow-400  cursor-pointer">
               <svg
                 className="w-3 h-2 text-yellow-400 dark:text-white mr-2"
                 aria-hidden="true"
@@ -331,7 +331,7 @@ const About = () => {
               </svg>
               About us
             </p>
-            <p className="text-white flex  items-center mt-4">
+            <p className="text-white flex  items-center mt-4 hover:text-yellow-400  cursor-pointer">
               <svg
                 className="w-3 h-2 text-yellow-400 dark:text-white mr-2"
                 aria-hidden="true"
@@ -349,7 +349,7 @@ const About = () => {
               </svg>
               Our Team
             </p>
-            <p className="text-white flex  items-center mt-4">
+            <p className="text-white flex  items-center mt-4 hover:text-yellow-400  cursor-pointer">
               <svg
                 className="w-3 h-2 text-yellow-400 dark:text-white mr-2"
                 aria-hidden="true"
@@ -367,7 +367,7 @@ const About = () => {
               </svg>
               Contact Us
             </p>
-            <p className="text-white flex  items-center mt-4">
+            <p className="text-white flex  items-center mt-4 hover:text-yellow-400  cursor-pointer">
               <svg
                 className="w-3 h-2 text-yellow-400 dark:text-white mr-2"
                 aria-hidden="true"
@@ -388,7 +388,7 @@ const About = () => {
           </div>
           <div className="flex flex-col mt-14 mb-14">
             <h1 className="text-white mt-4">Our Services</h1>
-            <p className="text-white flex  items-center mt-4">
+            <p className="text-white flex  items-center mt-4 hover:text-yellow-400  cursor-pointer">
               <svg
                 className="w-3 h-2 text-yellow-400 dark:text-white mr-2"
                 aria-hidden="true"
@@ -406,7 +406,7 @@ const About = () => {
               </svg>
               Web Development
             </p>
-            <p className="text-white flex  items-center mt-4">
+            <p className="text-white flex  items-center mt-4 hover:text-yellow-400  cursor-pointer">
               <svg
                 className="w-3 h-2 text-yellow-400 dark:text-white mr-2"
                 aria-hidden="true"
@@ -424,7 +424,7 @@ const About = () => {
               </svg>
               App Development
             </p>
-            <p className="text-white flex  items-center mt-4">
+            <p className="text-white flex  items-center mt-4 hover:text-yellow-400  cursor-pointer">
               <svg
                 className="w-3 h-2 text-yellow-400 dark:text-white mr-2"
                 aria-hidden="true"
@@ -442,7 +442,7 @@ const About = () => {
               </svg>
               Software Development
             </p>
-            <p className="text-white flex  items-center mt-4">
+            <p className="text-white flex  items-center mt-4 hover:text-yellow-400  cursor-pointer">
               <svg
                 className="w-3 h-2 text-yellow-400 dark:text-white mr-2"
                 aria-hidden="true"
@@ -460,7 +460,7 @@ const About = () => {
               </svg>
               Digital Marketing
             </p>
-            <p className="text-white flex  items-center mt-4">
+            <p className="text-white flex  items-center mt-4 hover:text-yellow-400  cursor-pointer">
               <svg
                 className="w-3 h-2 text-yellow-400 dark:text-white mr-2"
                 aria-hidden="true"
