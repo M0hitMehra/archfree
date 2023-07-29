@@ -1,36 +1,124 @@
 import React from "react";
 import { BiCubeAlt } from "react-icons/bi";
 import { PiScrollDuotone } from "react-icons/pi";
-
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import "../../styles/About.css";
 const About = () => {
+  // const containerVariants = {
+  //   hidden: { opacity: 0, y: 100 },
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: {
+  //       duration: 1,
+  //       // repeat: Infinity, // Set to loop indefinitely
+  //       repeatType: 'reverse', // Reverse the animation when it repeats
+  //     },
+  //   },
+  // };
+
+  // const [containerRef, containerInView] = useInView({
+  //   triggerOnce: true,
+  //   threshold: 0.2, // Adjust this threshold value to determine when the animation should start
+  // });
+  // const containerAnimation = containerInView ? "visible" : "hidden";
+
+  const leftColumnVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const rightColumnVariants = {
+    hidden: { opacity: 0, x: 100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const [leftColumnRef, leftColumnInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2, // Adjust this threshold value to determine when the animation should start
+  });
+
+  const [rightColumnRef, rightColumnInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const leftColumnAnimation = leftColumnInView ? "visible" : "hidden";
+  const rightColumnAnimation = rightColumnInView ? "visible" : "hidden";
+
+  // for features
+  const missionVariant = {
+    hidden: { opacity: 0, x: -100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const visionVariant = {
+    hidden: { opacity: 0, x: 100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const [missionRef, missionInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const [visionRef, visionInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  // Determine when to trigger the animation based on visibility
+  const missionAnimation = missionInView ? "visible" : "hidden";
+  const visionAnimation = visionInView ? "visible" : "hidden";
+
   return (
     <section>
       <div className="mx-20">
-        <h2
-          style={{
-            color: "#aaaaaa",
-            fontSize: "14px",
-            fontWeight: "500",
-            display: "flex",
-            alignItems: "center",
-            letterSpacing: "2px",
-          }}
-        >
-          ABOUT US{" "}
-          <div
-            style={{
-              background: "#ffc107",
-              height: "1px ",
-              width: "10vw",
-              display: "inline-block",
-              marginLeft: "10px",
-            }}
-          ></div>
-        </h2>
+        <div>This is About Section</div>
         <div className="row_About ">
-          <div className="About_text">
-            <h3 className="text-3xl font-bold  text-white">ABOUT TO ARCHER</h3>
+          <motion.div
+            className="About_text"
+            variants={leftColumnVariants}
+            initial="hidden"
+            animate={leftColumnAnimation} // Use the determined animation
+            ref={leftColumnRef}
+          >
+            <div className="mt-2 flex items-center">
+              <h1 className="text-white text-xl font-medium">ABOUT US</h1>
+              <hr className="border-1 border-amber-500  drop-shadow-xl w-48 ml-3"></hr>
+            </div>
+            <h3 className="text-3xl font-bold  text-white mt-8">
+              ABOUT TO ARCHER
+            </h3>
             <p className="text-slate-400  font-medium mt-6">
               The Archer Technology is leading software development company in
               India that offers innovative and creative software solutions for
@@ -56,23 +144,43 @@ const About = () => {
               comes first in our business which makes us client oriented
               company.
             </p>
-          </div>
-          <div className="About_image">
+          </motion.div>
+          <motion.div
+            className="About_image mt-20"
+            variants={rightColumnVariants}
+            initial="hidden"
+            animate={rightColumnAnimation} // Use the determined animation
+            ref={rightColumnRef}
+          >
             <img
               src="https://www.thearchertechnology.com/public/Images/shutterstock_446870920%20(1).webp"
               alt="react logo"
               className="image-fluid"
             />
-          </div>
+          </motion.div>
         </div>
 
         <div className="flex justify-between mt-20">
-          <img
-            src="https://www.thearchertechnology.com/public/frontend/img/features.jpg"
-            alt="react logo"
+          <motion.div
             className="img_about"
-          />
-          <div className="text_about">
+            variants={missionVariant}
+            initial="hidden"
+            animate={missionAnimation}
+            ref={missionRef}
+          >
+            <img
+              src="https://www.thearchertechnology.com/public/frontend/img/features.jpg"
+              alt="react logo"
+              className="max-w-[100%] h-auto"
+            />
+          </motion.div>
+          <motion.div
+            className="text_about"
+            variants={visionVariant}
+            initial="hidden"
+            animate={visionAnimation}
+            ref={visionRef}
+          >
             <h1 className="text-3xl font-bold flex text-white">
               <i className="text-4xl text-yellow-400  ">
                 <PiScrollDuotone />
@@ -96,7 +204,7 @@ const About = () => {
               arises in business with easiness for you to enjoy streamlined
               business operations.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="flex justify-center items-center mt-20 flex-col">
