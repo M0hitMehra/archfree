@@ -62,6 +62,15 @@
   filter: brightness(100%) !important;
 }
 
+.section-title h2::after {
+  content: "";
+  width:250px;
+  height: 1.8px;
+  display: inline-block;
+  background: rgb(180, 174, 174);
+  margin: 4px 10px;
+}
+
 .clicked {
   color: #ffc451;
 }
