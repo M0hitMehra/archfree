@@ -294,7 +294,7 @@ const About = () => {
           </div>
 
           <div className="flex flex-col mt-14 mb-14">
-            <h1 className="text-white mt-4">Quick Links</h1>
+            <h1 className="text-white mt-4 font-medium">Quick Links</h1>
             <p className="text-white flex  items-center mt-4 hover:text-yellow-400  cursor-pointer">
               <svg
                 className="w-3 h-2 text-yellow-400 dark:text-white mr-2"
@@ -387,7 +387,7 @@ const About = () => {
             </p>
           </div>
           <div className="flex flex-col mt-14 mb-14">
-            <h1 className="text-white mt-4">Our Services</h1>
+            <h1 className="text-white mt-4 font-medium">Our Services</h1>
             <p className="text-white flex  items-center mt-4 hover:text-yellow-400  cursor-pointer">
               <svg
                 className="w-3 h-2 text-yellow-400 dark:text-white mr-2"
@@ -481,7 +481,7 @@ const About = () => {
           </div>
 
           <div className="flex flex-col mt-14 mb-14">
-            <h1 className="text-white mt-4">Social Media</h1>
+            <h1 className="text-white mt-4 font-medium">Social Media</h1>
             <div className="flex mt-6">
               <div className="text-white ml-2">logo1</div>
               <div className="text-white ml-2">logo2</div>
