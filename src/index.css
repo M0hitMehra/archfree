@@ -10,7 +10,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
- 
+  scroll-behavior: smooth;
 }
 
 .navbar {
