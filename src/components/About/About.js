@@ -222,8 +222,8 @@ const About = () => {
           />
         </div>
 
-        <div className="flex justify-between mt-20">
-          <div className="m-3">
+        <div className="flex justify-between mt-20 w-full">
+          <div className="m-3 w-2/5 h-auto">
             <h1 className="text-2xl font-bold  text-white">
               Specification Requirement
             </h1>
@@ -233,7 +233,7 @@ const About = () => {
               for project management.
             </p>
           </div>
-          <div className="m-3">
+          <div className="m-3 w-2/5 h-auto">
             <h1 className="text-2xl font-bold  text-white">
               Wireframe and Design
             </h1>
@@ -243,7 +243,7 @@ const About = () => {
               end-user.
             </p>
           </div>
-          <div className="m-3">
+          <div className="m-3 w-2/5 h-auto">
             <h1 className="text-2xl font-bold  text-white">
               Architecture and Database Design
             </h1>
@@ -254,8 +254,8 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-between mt-6 mb-10">
-          <div className="m-3">
+        <div className="flex justify-between mt-4 mb-10 w-full">
+          <div className="m-3 w-2/5 h-auto">
             <h1 className="text-2xl font-bold  text-white">Development</h1>
             <p className="text-slate-400  font-medium mt-4">
               This stage is about the research of overall requirements and the
@@ -263,7 +263,7 @@ const About = () => {
               for project management.
             </p>
           </div>
-          <div className="m-3">
+          <div className="m-3 w-2/5 h-auto">
             <h1 className="text-2xl font-bold  text-white">Testing</h1>
             <p className="text-slate-400  font-medium mt-4">
               Next, we Wireframe and design the interface of your app that will
@@ -271,7 +271,7 @@ const About = () => {
               end-user.
             </p>
           </div>
-          <div className="m-3">
+          <div className="m-3 w-2/5 h-auto">
             <h1 className="text-2xl font-bold  text-white">Deployment</h1>
             <p className="text-slate-400  font-medium mt-4">
               In This stage We design architecture and database, Divides your
