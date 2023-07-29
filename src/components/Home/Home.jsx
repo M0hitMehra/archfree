@@ -150,20 +150,20 @@ const Home = () => {
 
       {/* ABout */}
 
-      <section id="about" className="about ">
+      <section id="about" className="about mt-8 p-2 xl:p-24">
         <div className="text-white p-4">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-24">
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 xl:gap-24">
             <motion.div
-              className="md:col-span-6"
+              className="xl:col-span-6"
               variants={leftColumnVariants}
               initial="hidden"
               animate={leftColumnAnimation} // Use the determined animation
               ref={leftColumnRef} // Attach the ref to the element
             >
-              <h3 className="font-bold text-2xl md:text-4xl text-slate-400">
+              <h3 className="font-bold text-2xl xl:text-4xl text-slate-400">
                 ABOUT TO ARCHER
               </h3>
-              <p className="font-semibold text-md md:text-xl mt-4 text-slate-200">
+              <p className="font-semibold text-md xl:text-xl mt-4 text-slate-200">
                 The Archer Technology is a leading software development company
                 in India that offers innovative and creative software solutions
                 for small enterprises to large organizations for their digital
@@ -174,7 +174,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div
-              className="md:col-span-6 flex justify-center"
+              className="xl:col-span-6 flex justify-center"
               variants={rightColumnVariants}
               initial="hidden"
               animate={rightColumnAnimation} // Use the determined animation
@@ -192,10 +192,10 @@ const Home = () => {
 
       {/* Features */}
 
-      <section id="features" className="text-white p-4">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-24">
+      <section id="features" className="text-white p-2 xl:p-24">
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 xl:gap-24">
           <motion.div
-            className="md:col-span-6 bg-cover bg-center"
+            className="xl:col-span-6 bg-cover bg-center"
             variants={missionVariant}
             initial="hidden"
             animate={missionAnimation}
@@ -208,19 +208,19 @@ const Home = () => {
             />
           </motion.div>
           <motion.div
-            className="md:col-span-6 flex flex-col gap-5"
+            className="xl:col-span-6 flex flex-col gap-5"
             variants={visionVariant}
             initial="hidden"
             animate={visionAnimation}
             ref={visionRef}
           >
             <div className="flex gap-5 items-center">
-              <i className="text-3xl md:text-4xl text-yellow-400">
+              <i className="text-3xl xl:text-4xl text-yellow-400">
                 <PiScrollDuotone />
               </i>
               <div className="flex flex-col gap-3">
-                <h4 className="text-xl md:text-4xl font-bold">Our Mission</h4>
-                <p className="text-slate-400 text-md md:text-xl">
+                <h4 className="text-xl xl:text-4xl font-bold">Our Mission</h4>
+                <p className="text-slate-400 text-md xl:text-xl">
                   Every software product that we develop is built with assured
                   quality and exhibits excellence in its core aspects. We ensure
                   that our clients get what they need to fulfill their aims.
@@ -228,12 +228,12 @@ const Home = () => {
               </div>
             </div>
             <div className="flex gap-5 items-center">
-              <i className="text-3xl md:text-4xl text-yellow-400">
+              <i className="text-3xl xl:text-4xl text-yellow-400">
                 <BiCubeAlt />
               </i>
               <div className="flex flex-col gap-3">
-                <h4 className="text-xl md:text-4xl font-bold">Our Vision</h4>
-                <p className="text-slate-400 text-md md:text-xl">
+                <h4 className="text-xl xl:text-4xl font-bold">Our Vision</h4>
+                <p className="text-slate-400 text-md xl:text-xl">
                   We analyze your future business challenges and develop
                   creative and innovative digital solutions to encounter every
                   problem that arises in business with ease for you to enjoy
@@ -425,17 +425,17 @@ const Home = () => {
 
       {/* CTA  */}
 
-      <section id="cta" className="cta px-4 py-8 md:px-24 md:py-12">
+      <section id="cta" className="cta px-4 py-8 xl:px-24 xl:py-12">
   <div className="text-white">
     <div className="text-center">
-      <h3 className="text-3xl md:text-4xl font-bold font-[Raleway]">
+      <h3 className="text-3xl xl:text-4xl font-bold font-[Raleway]">
         why choose us?
       </h3>
-      <p className="my-4 md:my-8 text-sm md:text-base">
+      <p className="my-4 xl:my-8 text-sm xl:text-base">
         Our well-crafted Web design and development teams analyze and understand each project requirement in-depth to bring high-performing solutions that are truly unique to your business challenges and accelerate your business toward success.
       </p>
       <a
-        className="cta-btn font-semibold text-base md:text-xl border-2 py-2 md:py-3 px-4 md:px-6 border-white rounded-md hover:border-0 hover:text-black hover:bg-[#ffc451]"
+        className="cta-btn font-semibold text-base xl:text-xl border-2 py-2 xl:py-3 px-4 xl:px-6 border-white rounded-md hover:border-0 hover:text-black hover:bg-[#ffc451]"
         href="#"
       >
         Call To Action
@@ -447,13 +447,13 @@ const Home = () => {
 
       {/* contact us */}
 
-      <section id="contact" className="contact text-white p-4 md:p-24">
+      <section id="contact" className="contact text-white p-4 xl:p-24">
   <div className="container flex flex-col justify-center gap-6">
     <div className="section-title flex flex-col gap-4 mb-4">
-      <h2 className="text-md md:text-lg font-bold text-slate-300 uppercase">
+      <h2 className="text-md xl:text-lg font-bold text-slate-300 uppercase">
         Contact
       </h2>
-      <p className="text-xl md:text-3xl uppercase font-bold tracking-widest">
+      <p className="text-xl xl:text-3xl uppercase font-bold tracking-widest">
         Contact Us
       </p>
     </div>
@@ -470,17 +470,17 @@ const Home = () => {
       ></iframe>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mt-6 ">
-      <div className="info md:col-span-4 h-auto flex flex-col justify-between gap-7">
+    <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 mt-6 ">
+      <div className="info xl:col-span-4 h-auto flex flex-col justify-between gap-7">
         <div className="address flex items-center gap-4 ">
           <div className="bg-yellow-400 px-3 py-1 rounded-md mt-[-40px]">
             <CiLocationOn className="text-black h-8 w-4" />
           </div>
           <div>
-            <h4 className="text-lg md:text-2xl font-[raleway] font-medium text-gray-200">
+            <h4 className="text-lg xl:text-2xl font-[raleway] font-medium text-gray-200">
               Location:
             </h4>
-            <p className="text-sm md:text-base text-gray-300 mt-2">
+            <p className="text-sm xl:text-base text-gray-300 mt-2">
               F-15, 1st Floor, Angel Lords Hotel, Old Marketing Yard, Amreli, Gujarat, India, 365601
             </p>
           </div>
@@ -491,10 +491,10 @@ const Home = () => {
             <BsPhone className="text-black h-8 w-4" />
           </div>
           <div>
-            <h4 className="text-lg md:text-2xl font-[raleway] font-medium text-gray-200">
+            <h4 className="text-lg xl:text-2xl font-[raleway] font-medium text-gray-200">
               Email:
             </h4>
-            <p className="text-sm md:text-base tracking-widest text-gray-300 mt-2">
+            <p className="text-sm xl:text-base tracking-widest text-gray-300 mt-2">
               info@thearchertechnology.com
             </p>
           </div>
@@ -505,17 +505,17 @@ const Home = () => {
             <TfiEmail className="text-black h-8 w-4" />
           </div>
           <div>
-            <h4 className="text-lg md:text-2xl font-[raleway] font-medium text-gray-200">
+            <h4 className="text-lg xl:text-2xl font-[raleway] font-medium text-gray-200">
               Call:
             </h4>
-            <p className="text-sm md:text-base tracking-widest text-gray-300 mt-2">
+            <p className="text-sm xl:text-base tracking-widest text-gray-300 mt-2">
               +918849993525
             </p>
           </div>
         </div>
       </div>
 
-      <div className="col-span-1 md:col-span-8">
+      <div className="col-span-1 xl:col-span-8">
         <form
           id="contactform"
           role="form"
@@ -527,7 +527,7 @@ const Home = () => {
               <input
                 type="text"
                 name="fullname"
-                className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
+                className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm xl:text-base"
                 id="name"
                 placeholder="Your Name"
                 required=""
@@ -537,7 +537,7 @@ const Home = () => {
             <div className="form-group w-full">
               <input
                 type="email"
-                className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
+                className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm xl:text-base"
                 name="email"
                 id="email"
                 placeholder="Your Email"
@@ -556,7 +556,7 @@ const Home = () => {
           <div className="form-group w-full">
             <input
               type="text"
-              className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
+              className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm xl:text-base"
               name="mobile"
               id="mobile"
               placeholder="Your Mobile"
@@ -565,7 +565,7 @@ const Home = () => {
           </div>
           <div className="form-group w-full">
             <textarea
-              className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
+              className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm xl:text-base"
               name="msg"
               rows="5"
               placeholder="Your Ideas/Message"
