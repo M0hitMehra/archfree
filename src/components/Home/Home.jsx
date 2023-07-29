@@ -115,7 +115,7 @@ const Home = () => {
   const sectionAnimation = sectionInView ? "visible" : "hidden";
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       {/* main Part with umage */}
       <section id="hero" className="flex items-center justify-center">
         <div className=" ">
@@ -146,7 +146,7 @@ const Home = () => {
 
       {/* ABout */}
 
-      <section id="about" className="about">
+      <section id="about" className="about ">
         <div className="text-white">
           <div className="grid grid-cols-12 gap-24 p-24">
             <motion.div
@@ -245,16 +245,16 @@ const Home = () => {
 
       {/* SERVICES */}
 
-      <section id="services" class="services text-white p-24">
-        <div class="container ">
-          <div class="section-title mb-12">
-            <h2 class="text-xl font-bold text-slate-300">Services</h2>
+      <section id="services"  className="services text-white p-24">
+        <div  className="container ">
+          <div  className="section-title mb-12">
+            <h2  className="text-xl font-bold text-slate-300">Services</h2>
             <p className="text-4xl font-serif font-bold my-5">
               Check our Services
             </p>
           </div>
           <div className="flex flex-col">
-            <div class="flex justify-center items-center p-8 gap-14 ">
+            <div  className="flex justify-center items-center p-8 gap-14 ">
               {/* Service 1  */}
               <motion.div
                 className="bg-[#ffeeec] flex flex-col text-black justify-evenly items-center gap-2 p-4 rounded-lg grow h-[24rem] w-[4rem] text-center"
@@ -268,16 +268,16 @@ const Home = () => {
                 initial="hidden"
                 ref={sectionRef}
               >
-                <div class=" h-24 w-24 p-1 flex items-center rounded-lg  justify-center bg-yellow-400 ">
+                <div  className=" h-24 w-24 p-1 flex items-center rounded-lg  justify-center bg-yellow-400 ">
                   <img
                     src="	https://www.thearchertechnology.com/public/frontend/img/server.png"
                     alt="Web Development"
-                    class="   "
+                     className="   "
                   />
                 </div>
-                <div class="flex flex-col gap-4">
-                  <h5 class="  text-2xl font-bold  ">Web Development</h5>
-                  <p class="text-slate-800">
+                <div  className="flex flex-col gap-4">
+                  <h5  className="  text-2xl font-bold  ">Web Development</h5>
+                  <p  className="text-slate-800">
                     Your website is the face of your business. The importance of
                     having a business website is to have a strong 24/7 online
                     presence of your business and all are possible at Archer
@@ -299,16 +299,16 @@ const Home = () => {
                 initial="hidden"
                 ref={sectionRef}
               >
-                <div class=" h-24 w-24 p-1 flex items-center rounded-lg  justify-center bg-yellow-400 ">
+                <div  className=" h-24 w-24 p-1 flex items-center rounded-lg  justify-center bg-yellow-400 ">
                   <img
                     src="	https://www.thearchertechnology.com/public/frontend/img/digital-marketing.png"
                     alt="Digital Marketing"
-                    class="   "
+                     className="   "
                   />
                 </div>
-                <div class="flex flex-col gap-4">
-                  <h5 class=" text-2xl font-bold   ">Digital Marketing</h5>
-                  <p class="text-slate-800 ">
+                <div  className="flex flex-col gap-4">
+                  <h5  className=" text-2xl font-bold   ">Digital Marketing</h5>
+                  <p  className="text-slate-800 ">
                     Looking for a Digital Marketing Agency to help you create a
                     strong online presence for your business? With our digital
                     marketing services, you get more bang for your hard-earned
@@ -330,16 +330,16 @@ const Home = () => {
                 initial="hidden"
                 ref={sectionRef}
               >
-                <div class=" h-24 w-24 p-1 flex rounded-lg  items-center justify-center bg-yellow-400 ">
+                <div  className=" h-24 w-24 p-1 flex rounded-lg  items-center justify-center bg-yellow-400 ">
                   <img
                     src="https://www.thearchertechnology.com/public/frontend/img/graphics.png"
                     alt="Graphics Design"
-                    class="   "
+                     className="   "
                   />
                 </div>
-                <div class="flex flex-col gap-4">
-                  <h5 class="  text-2xl font-bold  ">Graphics Design</h5>
-                  <p class="text-slate-800 ">
+                <div  className="flex flex-col gap-4">
+                  <h5  className="  text-2xl font-bold  ">Graphics Design</h5>
+                  <p  className="text-slate-800 ">
                     Our Graphics designer can enhance any website to convert
                     into the beautiful layout, Mobile app interface, Logo Design
                     and many more.
@@ -351,7 +351,7 @@ const Home = () => {
             <div className=" flex gap-24 p-8 justify-center items-center text-black">
               {/* Service  4  */}
               <motion.div
-                class=" flex  flex-col gap-2 p-4 grow justify-evenly items-center h-[18rem] w-[4rem] text-center bg-[#ffeeec] rounded-lg "
+                 className=" flex  flex-col gap-2 p-4 grow justify-evenly items-center h-[18rem] w-[4rem] text-center bg-[#ffeeec] rounded-lg "
                 variants={sections}
                 animate={sectionAnimation} // Use the animation controls
                 whileHover={{
@@ -362,15 +362,15 @@ const Home = () => {
                 initial="hidden"
                 ref={sectionRef}
               >
-                <div class="h-24 w-24 p-1 bg-yellow-400 flex rounded-lg justify-center items-center ">
+                <div  className="h-24 w-24 p-1 bg-yellow-400 flex rounded-lg justify-center items-center ">
                   <img
                     src="	https://www.thearchertechnology.com/public/frontend/img/mobile%20(1).png"
                     alt="Mobile Apps Development"
-                    class=" "
+                     className=" "
                   />
                 </div>
-                <h5 class="   text-2xl font-bold  ">Mobile Apps Development</h5>
-                <p class="text-slate-800 ">
+                <h5  className="   text-2xl font-bold  ">Mobile Apps Development</h5>
+                <p  className="text-slate-800 ">
                   Every business aims to increase their audience base, brand
                   popularity, sales, and revenue generation. A mobile
                   application is capable of doing all these and helps businesses
@@ -381,7 +381,7 @@ const Home = () => {
 
               {/* Service 5  */}
               <motion.div
-                class=" flex  flex-col gap-2 p-4 grow justify-evenly items-center h-[18rem] w-[4rem] text-center bg-[#ffeeec] rounded-lg "
+                 className=" flex  flex-col gap-2 p-4 grow justify-evenly items-center h-[18rem] w-[4rem] text-center bg-[#ffeeec] rounded-lg "
                 variants={sections}
                 animate={sectionAnimation} // Use the animation controls
                 whileHover={{
@@ -394,15 +394,15 @@ const Home = () => {
                 ref={sectionRef}
               >
                 {" "}
-                <div class="h-24 w-24 p-1 bg-yellow-400 flex rounded-lg justify-center items-center ">
+                <div  className="h-24 w-24 p-1 bg-yellow-400 flex rounded-lg justify-center items-center ">
                   <img
                     src="https://www.thearchertechnology.com/public/frontend/img/software.png"
                     alt="Software Development"
-                    class=" "
+                     className=" "
                   />
                 </div>
-                <h5 class="  text-2xl font-bold   ">Software Development</h5>
-                <p class="text-center text-slate-800">
+                <h5  className="  text-2xl font-bold   ">Software Development</h5>
+                <p  className="text-center text-slate-800">
                   Software is very important for businesses as it helps them
                   distinguish from competitors and become more competitive.
                   Software developed at Archer Technology can improve the
@@ -415,7 +415,27 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </>
+
+      {/* CTA  */}
+
+      <section id="cta"  className="cta">
+        <div  className="container aos-init aos-animate" data-aos="zoom-in">
+            <div  className="text-center">
+                <h3>why choose us?</h3>
+                <p claa="">
+            
+                Our well crafted Web design and development teams analyze and understand 
+                each project requirement in-depth to bring high performing solutions that 
+                are truly unique to your business challenges and accelerate your business 
+                toward success.
+                </p>
+                <a  className="cta-btn" href="#">Call To Action</a>
+            </div>
+        </div>
+    </section>
+
+
+    </div>
   );
 };
 
