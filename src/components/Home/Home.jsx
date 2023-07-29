@@ -3,6 +3,9 @@ import { BiCubeAlt } from "react-icons/bi";
 import { PiScrollDuotone } from "react-icons/pi";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { CiLocationOn } from "react-icons/ci";
+import { TfiEmail } from "react-icons/tfi";
+import { BsPhone } from "react-icons/bs";
 
 const Home = () => {
   // for main
@@ -447,12 +450,14 @@ const Home = () => {
       {/* contact us */}
 
       <section id="contact" className="contact text-white p-24">
-        <div className="container flex flex-col justify-center">
+        <div className="container flex flex-col justify-center gap-6">
           <div className="section-title flex flex-col gap-4 mb-4">
             <h2 className="text-md font-bold text-slate-300 uppercase">
               Contact
             </h2>
-            <p className="text-3xl uppercase font-bold tracking-wider">Contact Us</p>
+            <p className="text-3xl uppercase font-bold tracking-widest">
+              Contact Us
+            </p>
           </div>
 
           <div className="">
@@ -467,65 +472,82 @@ const Home = () => {
             ></iframe>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
-            <div className="info">
-              <div className="address">
-                <i className="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>
-                  F-15, 1st Floor, Angel Lords Hotel, Old Marketing Yard,
-                  Amreli, Gujarat, India, 365601
-                </p>
+          <div className="grid grid-cols-12  gap-6 mt-6 ">
+            <div className="info col-span-4 md:h-[200px] h-auto flex flex-col justify-between gap-7">
+              <div className="address flex items-center gap-4 ">
+                <div className="bg-yellow-400 px-3 py-1 rounded-md mt-[-40px]">
+                  <CiLocationOn className=" text-black    h-8 w-4" />
+                </div>
+                <div>
+                  <h4 className=" text-2xl font-[raleway] font-medium text-gray-200 ">
+                    Location:
+                  </h4>
+                  <p className="text-sm tracking-widest text-gray-300 mt-2">
+                    F-15, 1st Floor, Angel Lords Hotel, Old Marketing Yard,
+                    Amreli, Gujarat, India, 365601
+                  </p>
+                </div>
               </div>
 
-              <div className="email">
-                <i className="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>info@thearchertechnology.com</p>
+              <div className="email flex items-center gap-4 ">
+                <div className="bg-yellow-400 px-3 py-1 rounded-md">
+                  <BsPhone className=" text-black   h-8  w-4" />
+                </div>
+                <div>
+                  <h4 className=" text-2xl font-[raleway] font-medium text-gray-200 ">
+                    Email:
+                  </h4>
+                  <p className="text-sm tracking-widest text-gray-300 mt-2">
+                    info@thearchertechnology.com
+                  </p>
+                </div>
               </div>
 
-              <div className="phone">
-                <i className="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+918849993525</p>
+              <div className="phone flex items-center gap-4 ">
+                <div className="bg-yellow-400 px-3 py-1 rounded-md">
+                  <TfiEmail className=" text-black    h-8 w-4" />
+                </div>
+                <div>
+                  <h4 className=" text-2xl font-[raleway] font-medium text-gray-200 ">
+                    Call:
+                  </h4>
+                  <p className="text-sm tracking-widest text-gray-300 mt-2">
+                    +918849993525
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div>
+            <div className="col-span-8">
               <form
                 id="contactform"
                 role="form"
-                className="php-email-form"
+                className="php-email-form flex flex-col gap-5"
                 noValidate="novalidate"
               >
-                <input
-                  type="hidden"
-                  name="_token"
-                  value="fY9DJ9Xvstntk2SvF8v8cfhITLZGq7gM3cIL78bS"
-                />
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="form-group">
+                <div className="flex gap-5">
+                  <div className="form-group w-full">
                     <input
                       type="text"
                       name="fullname"
-                      className="form-control error"
+                      className="form-control w-full p-2 rounded-md border-2 border-blue-400  focus:border-bg-400 focus:outline-blue-500"
                       id="name"
                       placeholder="Your Name"
                       required=""
                       aria-invalid="true"
                     />
-                    <label
+                    {/* <label
                       id="name-error"
                       className="error text-red-500 text-sm"
                       htmlFor="name"
                     >
                       Name is required
-                    </label>
+                    </label> */}
                   </div>
-                  <div className="form-group">
+                  <div className="form-group w-full">
                     <input
                       type="email"
-                      className="form-control valid"
+                      className="form-control w-full p-2 rounded-md border-2 border-blue-400  focus:border-bg-400 focus:outline-blue-500"
                       name="email"
                       id="email"
                       placeholder="Your Email"
@@ -541,19 +563,19 @@ const Home = () => {
                     />
                   </div>
                 </div>
-                <div className="form-group">
+                <div className="form-group w-full">
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control w-full  p-2 rounded-md border-2 border-blue-400  focus:border-bg-400 focus:outline-blue-500"
                     name="mobile"
                     id="mobile"
                     placeholder="Your Mobile"
                     required=""
                   />
                 </div>
-                <div className="form-group">
+                <div className="form-group w-full">
                   <textarea
-                    className="form-control"
+                    className="form-control  w-full  p-2 rounded-md border-2 border-blue-400  focus:border-bg-400 focus:outline-blue-500"
                     name="msg"
                     rows="5"
                     placeholder="Your Ideas/Message"
@@ -563,7 +585,10 @@ const Home = () => {
 
                 <div className="sent-message mt-3" id="notidiv"></div>
                 <div className="text-center mt-4">
-                  <button id="save" className="btn btn-warning">
+                  <button
+                    id="save"
+                    className="btn bg-yellow-500 hover:bg-yellow-400 px-3 py-2 rounded-md text-black"
+                  >
                     Send Message
                   </button>
                 </div>
