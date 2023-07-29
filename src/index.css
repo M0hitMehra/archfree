@@ -71,6 +71,16 @@
   margin: 4px 10px;
 }
 
+.cta {
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url(	https://www.thearchertechnology.com/public/frontend/img/cta-bg.jpg) fixed center center;
+  background-size: cover;
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
 .clicked {
   color: #ffc451;
 }
