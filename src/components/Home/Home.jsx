@@ -118,14 +118,15 @@ const Home = () => {
   const sectionAnimation = sectionInView ? "visible" : "hidden";
 
   return (
+    
     <div className=" overflow-x-hidden ">
       {/* main Part with umage */}
       <section id="hero" className="flex items-center justify-center">
-        <div className=" ">
-          <div className=" flex justify-center ">
+        <div className="p-4">
+          <div className="flex justify-center">
             <div className="col-xl-6 col-lg-8">
               <motion.div
-                className="text-white text-4xl text-center font-bold"
+                className="text-white text-2xl sm:text-4xl text-center font-bold"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -134,7 +135,7 @@ const Home = () => {
                 <span className="text-[#ffc451]">.</span>
               </motion.div>
               <motion.h2
-                className="text-white text-center text-xl"
+                className="text-white text-center text-lg sm:text-xl mt-4"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -150,19 +151,19 @@ const Home = () => {
       {/* ABout */}
 
       <section id="about" className="about ">
-        <div className="text-white">
-          <div className="grid grid-cols-12 gap-24 p-24">
+        <div className="text-white p-4">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-24">
             <motion.div
-              className="col-span-6"
+              className="md:col-span-6"
               variants={leftColumnVariants}
               initial="hidden"
               animate={leftColumnAnimation} // Use the determined animation
               ref={leftColumnRef} // Attach the ref to the element
             >
-              <h3 className="font-bold text-4xl text-slate-400">
+              <h3 className="font-bold text-2xl md:text-4xl text-slate-400">
                 ABOUT TO ARCHER
               </h3>
-              <p className="font-semibold text-xl mt-4 text-slate-200">
+              <p className="font-semibold text-md md:text-xl mt-4 text-slate-200">
                 The Archer Technology is a leading software development company
                 in India that offers innovative and creative software solutions
                 for small enterprises to large organizations for their digital
@@ -173,7 +174,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div
-              className="col-span-6"
+              className="md:col-span-6 flex justify-center"
               variants={rightColumnVariants}
               initial="hidden"
               animate={rightColumnAnimation} // Use the determined animation
@@ -181,7 +182,7 @@ const Home = () => {
             >
               <img
                 src="https://www.thearchertechnology.com/public/frontend/img/about.webp"
-                className="max-w-[100%] h-auto"
+                className="max-w-full h-auto"
                 alt=""
               />
             </motion.div>
@@ -191,64 +192,63 @@ const Home = () => {
 
       {/* Features */}
 
-      <section id="features" className="  text-white">
-        <div className="  ">
-          <div className="grid grid-cols-12  gap-24 p-24">
-            <motion.div
-              className=" col-span-6 bg-cover bg-center"
-              variants={missionVariant}
-              initial="hidden"
-              animate={missionAnimation}
-              ref={missionRef}
-            >
-              <img
-                src="https://cdjindalgroup.com/wp-content/uploads/2020/06/mission.png"
-                alt=""
-              />
-            </motion.div>
-            <motion.div
-              className=" col-span-6 "
-              variants={visionVariant}
-              initial="hidden"
-              animate={visionAnimation}
-              ref={visionRef}
-            >
-              <div className="  flex gap-5 mt-5  ">
-                <i className="text-4xl text-yellow-400  ">
-                  <PiScrollDuotone />
-                </i>
-                <div className="flex gap-3 flex-col">
-                  <h4 className="text-4xl font-bold">Our Mission</h4>
-                  <p className="text-slate-400 text-xl">
-                    Every software product that we develop is built with assured
-                    quality and exhibits excellence in its core aspects. We
-                    ensure that our clients get what they need to fulfill their
-                    aims.
-                  </p>
-                </div>
+      <section id="features" className="text-white p-4">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-24">
+          <motion.div
+            className="md:col-span-6 bg-cover bg-center"
+            variants={missionVariant}
+            initial="hidden"
+            animate={missionAnimation}
+            ref={missionRef}
+          >
+            <img
+              src="https://cdjindalgroup.com/wp-content/uploads/2020/06/mission.png"
+              alt=""
+              className="max-w-full h-auto"
+            />
+          </motion.div>
+          <motion.div
+            className="md:col-span-6 flex flex-col gap-5"
+            variants={visionVariant}
+            initial="hidden"
+            animate={visionAnimation}
+            ref={visionRef}
+          >
+            <div className="flex gap-5 items-center">
+              <i className="text-3xl md:text-4xl text-yellow-400">
+                <PiScrollDuotone />
+              </i>
+              <div className="flex flex-col gap-3">
+                <h4 className="text-xl md:text-4xl font-bold">Our Mission</h4>
+                <p className="text-slate-400 text-md md:text-xl">
+                  Every software product that we develop is built with assured
+                  quality and exhibits excellence in its core aspects. We ensure
+                  that our clients get what they need to fulfill their aims.
+                </p>
               </div>
-              <div className=" flex gap-5 mt-5  ">
-                <i className=" ">
-                  <BiCubeAlt className="text-4xl text-yellow-400" />
-                </i>
-                <div className="flex flex-col gap-3">
-                  <h4 className="text-4xl font-bold">Our Vision</h4>
-                  <p className="text-slate-400 text-xl">
-                    We analyze your future business challenges and develop
-                    creative and innovative digital solutions to encounter every
-                    problem that arises in business with ease for you to enjoy
-                    streamlined business operations.
-                  </p>
-                </div>
+            </div>
+            <div className="flex gap-5 items-center">
+              <i className="text-3xl md:text-4xl text-yellow-400">
+                <BiCubeAlt />
+              </i>
+              <div className="flex flex-col gap-3">
+                <h4 className="text-xl md:text-4xl font-bold">Our Vision</h4>
+                <p className="text-slate-400 text-md md:text-xl">
+                  We analyze your future business challenges and develop
+                  creative and innovative digital solutions to encounter every
+                  problem that arises in business with ease for you to enjoy
+                  streamlined business operations.
+                </p>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* SERVICES */}
 
-      <section id="services" className="services text-white p-24">
+{/* Not Optimized */}
+      <section id="services" className="services text-white p-24 ">
         <div className="container ">
           <div className="section-title mb-12">
             <h2 className="text-xl font-bold text-slate-300">Services</h2>
@@ -425,178 +425,169 @@ const Home = () => {
 
       {/* CTA  */}
 
-      <section id="cta" className="cta px-24 py-12 ">
-        <div className="text-white">
-          <div className="text-center ">
-            <h3 className="text-4xl font-bold font-[Raleway]">
-              why choose us ?
-            </h3>
-            <p className="my-4 mb-8">
-              Our well crafted Web design and development teams analyze and
-              understand each project requirement in-depth to bring high
-              performing solutions that are truly unique to your business
-              challenges and accelerate your business toward success.
-            </p>
-            <a
-              className="cta-btn font-semibold text-xl border-2 py-2 px-6 border-white rounded-md hover:border-0 hover:text-black hover:bg-[#ffc451]"
-              href="#"
-            >
-              Call To Action
-            </a>
-          </div>
-        </div>
-      </section>
+      <section id="cta" className="cta px-4 py-8 md:px-24 md:py-12">
+  <div className="text-white">
+    <div className="text-center">
+      <h3 className="text-3xl md:text-4xl font-bold font-[Raleway]">
+        why choose us?
+      </h3>
+      <p className="my-4 md:my-8 text-sm md:text-base">
+        Our well-crafted Web design and development teams analyze and understand each project requirement in-depth to bring high-performing solutions that are truly unique to your business challenges and accelerate your business toward success.
+      </p>
+      <a
+        className="cta-btn font-semibold text-base md:text-xl border-2 py-2 md:py-3 px-4 md:px-6 border-white rounded-md hover:border-0 hover:text-black hover:bg-[#ffc451]"
+        href="#"
+      >
+        Call To Action
+      </a>
+    </div>
+  </div>
+</section>
+
 
       {/* contact us */}
 
-      <section id="contact" className="contact text-white p-24">
-        <div className="container flex flex-col justify-center gap-6">
-          <div className="section-title flex flex-col gap-4 mb-4">
-            <h2 className="text-md font-bold text-slate-300 uppercase">
-              Contact
-            </h2>
-            <p className="text-3xl uppercase font-bold tracking-widest">
-              Contact Us
+      <section id="contact" className="contact text-white p-4 md:p-24">
+  <div className="container flex flex-col justify-center gap-6">
+    <div className="section-title flex flex-col gap-4 mb-4">
+      <h2 className="text-md md:text-lg font-bold text-slate-300 uppercase">
+        Contact
+      </h2>
+      <p className="text-xl md:text-3xl uppercase font-bold tracking-widest">
+        Contact Us
+      </p>
+    </div>
+
+    <div className="">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7419.02598295401!2d71.2269608977129!3d21.6049250781877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395880c5a8ae72db%3A0x3367f8679c1c86eb!2sAngel%20Lords%20Eco%20Inn%20Amreli!5e0!3m2!1sen!2sin!4v1670677249636!5m2!1sen!2sin"
+        width="100%"
+        height="300"
+        style={{ border: "0" }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mt-6 ">
+      <div className="info md:col-span-4 h-auto flex flex-col justify-between gap-7">
+        <div className="address flex items-center gap-4 ">
+          <div className="bg-yellow-400 px-3 py-1 rounded-md mt-[-40px]">
+            <CiLocationOn className="text-black h-8 w-4" />
+          </div>
+          <div>
+            <h4 className="text-lg md:text-2xl font-[raleway] font-medium text-gray-200">
+              Location:
+            </h4>
+            <p className="text-sm md:text-base text-gray-300 mt-2">
+              F-15, 1st Floor, Angel Lords Hotel, Old Marketing Yard, Amreli, Gujarat, India, 365601
             </p>
           </div>
+        </div>
 
-          <div className="">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7419.02598295401!2d71.2269608977129!3d21.6049250781877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395880c5a8ae72db%3A0x3367f8679c1c86eb!2sAngel%20Lords%20Eco%20Inn%20Amreli!5e0!3m2!1sen!2sin!4v1670677249636!5m2!1sen!2sin"
-              width="100%"
-              height="300"
-              style={{ border: "0" }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+        <div className="email flex items-center gap-4 ">
+          <div className="bg-yellow-400 px-3 py-1 rounded-md">
+            <BsPhone className="text-black h-8 w-4" />
           </div>
-
-          <div className="grid grid-cols-12  gap-6 mt-6 ">
-            <div className="info col-span-4 md:h-[200px] h-auto flex flex-col justify-between gap-7">
-              <div className="address flex items-center gap-4 ">
-                <div className="bg-yellow-400 px-3 py-1 rounded-md mt-[-40px]">
-                  <CiLocationOn className=" text-black    h-8 w-4" />
-                </div>
-                <div>
-                  <h4 className=" text-2xl font-[raleway] font-medium text-gray-200 ">
-                    Location:
-                  </h4>
-                  <p className="text-sm tracking-widest text-gray-300 mt-2">
-                    F-15, 1st Floor, Angel Lords Hotel, Old Marketing Yard,
-                    Amreli, Gujarat, India, 365601
-                  </p>
-                </div>
-              </div>
-
-              <div className="email flex items-center gap-4 ">
-                <div className="bg-yellow-400 px-3 py-1 rounded-md">
-                  <BsPhone className=" text-black   h-8  w-4" />
-                </div>
-                <div>
-                  <h4 className=" text-2xl font-[raleway] font-medium text-gray-200 ">
-                    Email:
-                  </h4>
-                  <p className="text-sm tracking-widest text-gray-300 mt-2">
-                    info@thearchertechnology.com
-                  </p>
-                </div>
-              </div>
-
-              <div className="phone flex items-center gap-4 ">
-                <div className="bg-yellow-400 px-3 py-1 rounded-md">
-                  <TfiEmail className=" text-black    h-8 w-4" />
-                </div>
-                <div>
-                  <h4 className=" text-2xl font-[raleway] font-medium text-gray-200 ">
-                    Call:
-                  </h4>
-                  <p className="text-sm tracking-widest text-gray-300 mt-2">
-                    +918849993525
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-span-8">
-              <form
-                id="contactform"
-                role="form"
-                className="php-email-form flex flex-col gap-5"
-                noValidate="novalidate"
-              >
-                <div className="flex gap-5">
-                  <div className="form-group w-full">
-                    <input
-                      type="text"
-                      name="fullname"
-                      className="form-control w-full p-2 rounded-md border-2 border-blue-400  focus:border-bg-400 focus:outline-blue-500"
-                      id="name"
-                      placeholder="Your Name"
-                      required=""
-                      aria-invalid="true"
-                    />
-                    {/* <label
-                      id="name-error"
-                      className="error text-red-500 text-sm"
-                      htmlFor="name"
-                    >
-                      Name is required
-                    </label> */}
-                  </div>
-                  <div className="form-group w-full">
-                    <input
-                      type="email"
-                      className="form-control w-full p-2 rounded-md border-2 border-blue-400  focus:border-bg-400 focus:outline-blue-500"
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
-                      required=""
-                      style={{
-                        backgroundImage: "url('data:image/png;base64,...')",
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "20px",
-                        backgroundPosition: "97% center",
-                        cursor: "auto",
-                      }}
-                      aria-invalid="false"
-                    />
-                  </div>
-                </div>
-                <div className="form-group w-full">
-                  <input
-                    type="text"
-                    className="form-control w-full  p-2 rounded-md border-2 border-blue-400  focus:border-bg-400 focus:outline-blue-500"
-                    name="mobile"
-                    id="mobile"
-                    placeholder="Your Mobile"
-                    required=""
-                  />
-                </div>
-                <div className="form-group w-full">
-                  <textarea
-                    className="form-control  w-full  p-2 rounded-md border-2 border-blue-400  focus:border-bg-400 focus:outline-blue-500"
-                    name="msg"
-                    rows="5"
-                    placeholder="Your Ideas/Message"
-                    required=""
-                  ></textarea>
-                </div>
-
-                <div className="sent-message mt-3" id="notidiv"></div>
-                <div className="text-center mt-4">
-                  <button
-                    id="save"
-                    className="btn bg-yellow-500 hover:bg-yellow-400 px-3 py-2 rounded-md text-black"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </form>
-            </div>
+          <div>
+            <h4 className="text-lg md:text-2xl font-[raleway] font-medium text-gray-200">
+              Email:
+            </h4>
+            <p className="text-sm md:text-base tracking-widest text-gray-300 mt-2">
+              info@thearchertechnology.com
+            </p>
           </div>
         </div>
-      </section>
+
+        <div className="phone flex items-center gap-4 ">
+          <div className="bg-yellow-400 px-3 py-1 rounded-md">
+            <TfiEmail className="text-black h-8 w-4" />
+          </div>
+          <div>
+            <h4 className="text-lg md:text-2xl font-[raleway] font-medium text-gray-200">
+              Call:
+            </h4>
+            <p className="text-sm md:text-base tracking-widest text-gray-300 mt-2">
+              +918849993525
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-span-1 md:col-span-8">
+        <form
+          id="contactform"
+          role="form"
+          className="php-email-form flex flex-col gap-5"
+          noValidate="novalidate"
+        >
+          <div className="flex gap-5">
+            <div className="form-group w-full">
+              <input
+                type="text"
+                name="fullname"
+                className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
+                id="name"
+                placeholder="Your Name"
+                required=""
+                aria-invalid="true"
+              />
+            </div>
+            <div className="form-group w-full">
+              <input
+                type="email"
+                className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                required=""
+                style={{
+                  backgroundImage: "url('data:image/png;base64,...')",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "20px",
+                  backgroundPosition: "97% center",
+                  cursor: "auto",
+                }}
+                aria-invalid="false"
+              />
+            </div>
+          </div>
+          <div className="form-group w-full">
+            <input
+              type="text"
+              className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
+              name="mobile"
+              id="mobile"
+              placeholder="Your Mobile"
+              required=""
+            />
+          </div>
+          <div className="form-group w-full">
+            <textarea
+              className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
+              name="msg"
+              rows="5"
+              placeholder="Your Ideas/Message"
+              required=""
+            ></textarea>
+          </div>
+
+          <div className="sent-message mt-3" id="notidiv"></div>
+          <div className="text-center mt-4">
+            <button
+              id="save"
+              className="btn bg-yellow-500 hover:bg-yellow-400 px-3 py-2 rounded-md text-black"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
