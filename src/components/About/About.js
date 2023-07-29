@@ -104,6 +104,24 @@ const About = () => {
   const missionAnimation = missionInView ? "visible" : "hidden";
   const visionAnimation = visionInView ? "visible" : "hidden";
 
+  const sections = {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const [sectionRef, sectionInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const sectionAnimation = sectionInView ? "visible" : "hidden";
+
   return (
     <section>
       <div className="mx-20">
@@ -223,7 +241,9 @@ const About = () => {
         </div>
 
         <div className="flex justify-between mt-20 w-full">
-          <div className="m-3 w-2/5 h-auto">
+          <motion.div className="m-3 w-2/5 h-auto "    variants={sections}
+                animate={sectionAnimation}   initial="hidden"
+                ref={sectionRef}>
             <h1 className="text-2xl font-bold  text-white">
               Specification Requirement
             </h1>
@@ -232,8 +252,10 @@ const About = () => {
               target audience of the website. This helps plan the best strategy
               for project management.
             </p>
-          </div>
-          <div className="m-3 w-2/5 h-auto">
+          </motion.div>
+          <motion.div className="m-3 w-2/5 h-auto"  variants={sections}
+                animate={sectionAnimation}   initial="hidden"
+                ref={sectionRef}>
             <h1 className="text-2xl font-bold  text-white">
               Wireframe and Design
             </h1>
@@ -242,8 +264,10 @@ const About = () => {
               represent the appearance and user experience of your app to the
               end-user.
             </p>
-          </div>
-          <div className="m-3 w-2/5 h-auto">
+          </motion.div>
+          <motion.div className="m-3 w-2/5 h-auto"  variants={sections}
+                animate={sectionAnimation}   initial="hidden"
+                ref={sectionRef}>
             <h1 className="text-2xl font-bold  text-white">
               Architecture and Database Design
             </h1>
@@ -252,33 +276,39 @@ const About = () => {
               information into subject-based tables to reduce redundant data and
               how database tables interacting each other.
             </p>
-          </div>
+          </motion.div>
         </div>
         <div className="flex justify-between mt-4 mb-10 w-full">
-          <div className="m-3 w-2/5 h-auto">
+          <motion.div className="m-3 w-2/5 h-auto"  variants={sections}
+                animate={sectionAnimation}   initial="hidden"
+                ref={sectionRef}>
             <h1 className="text-2xl font-bold  text-white">Development</h1>
             <p className="text-slate-400  font-medium mt-4">
               This stage is about the research of overall requirements and the
               target audience of the website. This helps plan the best strategy
               for project management.
             </p>
-          </div>
-          <div className="m-3 w-2/5 h-auto">
+          </motion.div>
+          <motion.div className="m-3 w-2/5 h-auto"  variants={sections}
+                animate={sectionAnimation}   initial="hidden"
+                ref={sectionRef}>
             <h1 className="text-2xl font-bold  text-white">Testing</h1>
             <p className="text-slate-400  font-medium mt-4">
               Next, we Wireframe and design the interface of your app that will
               represent the appearance and user experience of your app to the
               end-user.
             </p>
-          </div>
-          <div className="m-3 w-2/5 h-auto">
+          </motion.div>
+          <motion.div className="m-3 w-2/5 h-auto"  variants={sections}
+                animate={sectionAnimation}   initial="hidden"
+                ref={sectionRef}>
             <h1 className="text-2xl font-bold  text-white">Deployment</h1>
             <p className="text-slate-400  font-medium mt-4">
               In This stage We design architecture and database, Divides your
               information into subject-based tables to reduce redundant data and
               how database tables interacting each other..
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
       <footer>
