@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import Contact from "./components/Contact/Contact";
 import Team from "./components/Team/Team";
 import Career from "./components/Career/Career";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/career" element={<Career />} />
         </Routes>
       </div>
+      <Footer/>
     </>
   );
 }
