@@ -10,6 +10,9 @@ const Team = () => {
           <hr className="border-1 border-amber-500  drop-shadow-xl w-48 ml-3"></hr>
         </div>
       </div>
+      <div>
+        
+      </div>
     </section>
   );
 };

@@ -3,6 +3,10 @@ import { BiCubeAlt } from "react-icons/bi";
 import { PiScrollDuotone } from "react-icons/pi";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { IoLogoFacebook } from "react-icons/io";
+import { IoLogoLinkedin } from "react-icons/io";
+import { IoLogoTwitter } from "react-icons/io";
+import { IoLogoInstagram } from "react-icons/io";
 import "../../styles/About.css";
 const About = () => {
   // const containerVariants = {
@@ -483,10 +487,32 @@ const About = () => {
           <div className="flex flex-col mt-14 mb-14">
             <h1 className="text-white mt-4 font-medium">Social Media</h1>
             <div className="flex mt-6">
-              <div className="text-white ml-2">logo1</div>
-              <div className="text-white ml-2">logo2</div>
-              <div className="text-white ml-2">logo3</div>
-              <div className="text-white ml-2">logo4</div>
+            <div className="text-white">
+                {" "}
+                <i className=" ">
+                  <IoLogoTwitter className="text-3xl text-white-400 cursor-pointer hover:text-yellow-400" />
+                </i>
+              </div>
+              <div className="text-white ml-3">
+                {" "}
+                <i className=" ">
+                  <IoLogoFacebook className="text-3xl text-white-400 cursor-pointer hover:text-yellow-400" />
+                </i>
+              </div>
+              <div className="text-white ml-3">
+                {" "}
+                <i className=" ">
+                  <IoLogoInstagram className="text-3xl text-white-400 cursor-pointer hover:text-yellow-400" />
+                </i>
+              </div>
+
+              <div className="text-white ml-3">
+                {" "}
+                <i className=" ">
+                  <IoLogoLinkedin className="text-3xl text-white-400 cursor-pointer hover:text-yellow-400" />
+                </i>
+              </div>
+
             </div>
           </div>
         </div>
