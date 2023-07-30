@@ -7,7 +7,7 @@ import { useInView } from "react-intersection-observer";
 import "../../styles/About.css";
 const About = () => {
   const containerVariants = {
-    hidden: {opacity: 0, y: 200 },
+    hidden: { opacity: 0, y: 200 },
     visible: {
       opacity: 1,
       y: 0,
@@ -227,16 +227,20 @@ const About = () => {
         </div>
 
         <div className="flex justify-center items-center mt-20 flex-col">
-          <motion.h1 className="text-5xl font-bold flex text-white " variants={containerVariants}
+          <motion.h1
+            className="text-5xl font-bold flex text-white "
+            variants={containerVariants}
             initial="hidden"
             animate={containerAnimation}
-            ref={containerRef}>
+            ref={containerRef}
+          >
             Our Development Process
           </motion.h1>
           <motion.img
             src="https://www.thearchertechnology.com/public/frontend/img/Software-Process-for-Project-Development.png"
             alt="Loading"
-            className="mt-20"                            variants={containerVariants}
+            className="mt-20"
+            variants={containerVariants}
             initial="hidden"
             animate={containerAnimation}
             ref={containerRef}
@@ -245,9 +249,13 @@ const About = () => {
         </div>
 
         <div className="flex justify-between mt-20 w-full">
-          <motion.div className="m-3 w-2/5 h-auto "    variants={sections}
-                animate={sectionAnimation}   initial="hidden"
-                ref={sectionRef}>
+          <motion.div
+            className="m-3 w-2/5 h-auto "
+            variants={sections}
+            animate={sectionAnimation}
+            initial="hidden"
+            ref={sectionRef}
+          >
             <h1 className="text-2xl font-bold  text-white">
               Specification Requirement
             </h1>
@@ -257,9 +265,13 @@ const About = () => {
               for project management.
             </p>
           </motion.div>
-          <motion.div className="m-3 w-2/5 h-auto"  variants={sections}
-                animate={sectionAnimation}   initial="hidden"
-                ref={sectionRef}>
+          <motion.div
+            className="m-3 w-2/5 h-auto"
+            variants={sections}
+            animate={sectionAnimation}
+            initial="hidden"
+            ref={sectionRef}
+          >
             <h1 className="text-2xl font-bold  text-white">
               Wireframe and Design
             </h1>
@@ -269,9 +281,13 @@ const About = () => {
               end-user.
             </p>
           </motion.div>
-          <motion.div className="m-3 w-2/5 h-auto"  variants={sections}
-                animate={sectionAnimation}   initial="hidden"
-                ref={sectionRef}>
+          <motion.div
+            className="m-3 w-2/5 h-auto"
+            variants={sections}
+            animate={sectionAnimation}
+            initial="hidden"
+            ref={sectionRef}
+          >
             <h1 className="text-2xl font-bold  text-white">
               Architecture and Database Design
             </h1>
@@ -283,9 +299,13 @@ const About = () => {
           </motion.div>
         </div>
         <div className="flex justify-between mt-4  w-full">
-          <motion.div className="m-3 w-2/5 h-auto"  variants={sections}
-                animate={sectionAnimation}   initial="hidden"
-                ref={sectionRef}>
+          <motion.div
+            className="m-3 w-2/5 h-auto"
+            variants={sections}
+            animate={sectionAnimation}
+            initial="hidden"
+            ref={sectionRef}
+          >
             <h1 className="text-2xl font-bold  text-white">Development</h1>
             <p className="text-slate-400  font-medium mt-4">
               This stage is about the research of overall requirements and the
@@ -293,9 +313,13 @@ const About = () => {
               for project management.
             </p>
           </motion.div>
-          <motion.div className="m-3 w-2/5 h-auto"  variants={sections}
-                animate={sectionAnimation}   initial="hidden"
-                ref={sectionRef}>
+          <motion.div
+            className="m-3 w-2/5 h-auto"
+            variants={sections}
+            animate={sectionAnimation}
+            initial="hidden"
+            ref={sectionRef}
+          >
             <h1 className="text-2xl font-bold  text-white">Testing</h1>
             <p className="text-slate-400  font-medium mt-4">
               Next, we Wireframe and design the interface of your app that will
@@ -303,9 +327,13 @@ const About = () => {
               end-user.
             </p>
           </motion.div>
-          <motion.div className="m-3 w-2/5 h-auto"  variants={sections}
-                animate={sectionAnimation}   initial="hidden"
-                ref={sectionRef}>
+          <motion.div
+            className="m-3 w-2/5 h-auto"
+            variants={sections}
+            animate={sectionAnimation}
+            initial="hidden"
+            ref={sectionRef}
+          >
             <h1 className="text-2xl font-bold  text-white">Deployment</h1>
             <p className="text-slate-400  font-medium mt-4">
               In This stage We design architecture and database, Divides your
@@ -315,7 +343,6 @@ const About = () => {
           </motion.div>
         </div>
       </div>
-     
     </section>
   );
 };
