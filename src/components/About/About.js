@@ -6,24 +6,24 @@ import { useInView } from "react-intersection-observer";
 
 import "../../styles/About.css";
 const About = () => {
-  // const containerVariants = {
-  //   hidden: { opacity: 0, y: 100 },
-  //   visible: {
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: {
-  //       duration: 1,
-  //       // repeat: Infinity, // Set to loop indefinitely
-  //       repeatType: 'reverse', // Reverse the animation when it repeats
-  //     },
-  //   },
-  // };
+  const containerVariants = {
+    hidden: {opacity: 0, y: 200 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        // repeat: Infinity, // Set to loop indefinitely
+        repeatType: "reverse", // Reverse the animation when it repeats
+      },
+    },
+  };
 
-  // const [containerRef, containerInView] = useInView({
-  //   triggerOnce: true,
-  //   threshold: 0.2, // Adjust this threshold value to determine when the animation should start
-  // });
-  // const containerAnimation = containerInView ? "visible" : "hidden";
+  const [containerRef, containerInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2, // Adjust this threshold value to determine when the animation should start
+  });
+  const containerAnimation = containerInView ? "visible" : "hidden";
 
   const leftColumnVariants = {
     hidden: { opacity: 0, x: -100 },
@@ -227,13 +227,20 @@ const About = () => {
         </div>
 
         <div className="flex justify-center items-center mt-20 flex-col">
-          <h1 className="text-5xl font-bold flex text-white ">
+          <motion.h1 className="text-5xl font-bold flex text-white " variants={containerVariants}
+            initial="hidden"
+            animate={containerAnimation}
+            ref={containerRef}>
             Our Development Process
-          </h1>
-          <img
+          </motion.h1>
+          <motion.img
             src="https://www.thearchertechnology.com/public/frontend/img/Software-Process-for-Project-Development.png"
             alt="Loading"
-            className="mt-20"
+            className="mt-20"                            variants={containerVariants}
+            initial="hidden"
+            animate={containerAnimation}
+            ref={containerRef}
+            transition={{ delay: 0.8 }}
           />
         </div>
 
