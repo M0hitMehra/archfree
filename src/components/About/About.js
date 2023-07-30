@@ -275,7 +275,7 @@ const About = () => {
             </p>
           </motion.div>
         </div>
-        <div className="flex justify-between mt-4 mb-10 w-full">
+        <div className="flex justify-between mt-4  w-full">
           <motion.div className="m-3 w-2/5 h-auto"  variants={sections}
                 animate={sectionAnimation}   initial="hidden"
                 ref={sectionRef}>
