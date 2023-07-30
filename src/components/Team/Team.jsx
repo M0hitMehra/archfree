@@ -6,9 +6,46 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 const Team = () => {
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 80, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
+  const header = {
+    hidden:{y:-80},
+    visible:{
+      y:0,
+      transition:{
+        duration:1
+      }
+    }
+  }
+
   return (
-    <section id="team" className="team  md:pt-28 p-5 pt-28 text-white md:px-10 md:pb-14">
-      <div className="container flex flex-col gap-8 justify-center ">
+    <section
+      id="team"
+      className="team  md:pt-28 p-5 pt-28 text-white md:px-10 md:pb-14"
+    >
+      <motion.div className="container flex flex-col gap-8 justify-center "
+      variants={header}
+      animate="visible"
+      initial="hidden"
+      >
         <div className="section-title">
           <h2 className="text-md xl:text-lg font-bold text-slate-300 uppercase">
             Team
@@ -18,9 +55,17 @@ const Team = () => {
           </p>
         </div>
 
-        <div className=" flex flex-col flex-wrap md:flex-row justify-center md:justify-start items-center md:items-start gap-5">
+        <motion.div
+          className=" flex flex-col flex-wrap md:flex-row justify-center md:justify-start items-center md:items-start gap-5"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
           {/* Member 1 */}
-          <div className="memberflex flex-col justify-center  ">
+          <motion.div
+            className="memberflex flex-col justify-center  "
+            variants={item}
+          >
             <div className="member-img  overflow-y-hidden rounded-t-lg w-[250px] md:w-[300px] h-[300px] relative">
               <img
                 src="https://www.thearchertechnology.com/public/Images/sanjaysinh.jpeg"
@@ -40,10 +85,13 @@ const Team = () => {
               </h4>
               <span className="text-sm text-gray-800">Founder & CEO</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Member 2 */}
-          <div className="member flex flex-col justify-center  ">
+          <motion.div
+            className="memberflex flex-col justify-center  "
+            variants={item}
+          >
             <div className="member-img  overflow-y-hidden rounded-t-lg w-[250px] md:w-[300px] h-[300px] relative">
               <img
                 src="https://www.thearchertechnology.com/public/Images/prakash (2).jpg"
@@ -63,10 +111,13 @@ const Team = () => {
               </h4>
               <span className="text-sm text-gray-800">Co-Founder</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Member 3 */}
-          <div className="memberflex flex-col justify-center  ">
+          <motion.div
+            className="memberflex flex-col justify-center  "
+            variants={item}
+          >
             <div className="member-img  overflow-y-hidden  rounded-t-lg w-[250px] md:w-[300px] h-[300px] relative">
               <img
                 src="https://www.thearchertechnology.com/public/Images/bhgvanbhaib (2).jpg"
@@ -86,9 +137,9 @@ const Team = () => {
               </h4>
               <span className="text-sm text-gray-800">Business Advisor</span>
             </div>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
