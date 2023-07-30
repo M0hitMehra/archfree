@@ -120,7 +120,7 @@ const About = () => {
   const sectionAnimation = sectionInView ? "visible" : "hidden";
 
   return (
-    <section>
+    <section className=" overflow-x-hidden ">
       <div className="mx-20">
         <div>This is About Section</div>
         <div className="row_About ">
