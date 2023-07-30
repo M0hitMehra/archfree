@@ -99,6 +99,7 @@ const Home = () => {
   const missionAnimation = missionInView ? "visible" : "hidden";
   const visionAnimation = visionInView ? "visible" : "hidden";
 
+  // Services
   const sections1 = {
     hidden: { scale: 0 },
     visible: {
@@ -317,8 +318,6 @@ const Home = () => {
       </section>
 
       {/* SERVICES */}
-
-      {/* Not Optimized */}
       <section
         id="services"
         className="services text-white xl:p-24 md:p-7 px-2 pt-4 "
@@ -498,7 +497,6 @@ const Home = () => {
       </section>
 
       {/* CTA  */}
-
       <section id="cta" className="cta px-4 py-8 xl:px-24 xl:py-12">
         <div className="text-white">
           <div className="text-center">
@@ -522,7 +520,6 @@ const Home = () => {
       </section>
 
       {/* contact us */}
-
       <section id="contact" className="contact text-white p-4 xl:p-24">
         <div className="container flex flex-col justify-center gap-6">
           <div className="section-title flex flex-col gap-4 mb-4">
