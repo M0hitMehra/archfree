@@ -64,7 +64,7 @@
 
 .section-title h2::after {
   content: "";
-  width:250px;
+  width: 250px;
   height: 1.8px;
   display: inline-block;
   background: rgb(180, 174, 174);
@@ -72,12 +72,17 @@
 }
 
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url(	https://www.thearchertechnology.com/public/frontend/img/cta-bg.jpg) fixed center center;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.thearchertechnology.com/public/frontend/img/cta-bg.jpg) fixed center center;
   background-size: cover;
-  
+
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -90,3 +95,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+@media screen and (min-width: 1024px) {
+
+  
+}
