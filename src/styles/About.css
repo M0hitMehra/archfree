@@ -44,4 +44,17 @@
     .about_section3_text{
         text-align: center;
     }
+    .about_section1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;  
+    }
+    .About_text{
+        width:80%;
+    }
+    .About_image{
+        width:80%;
+        /* margin-top: 5px; */
+    }
 }
