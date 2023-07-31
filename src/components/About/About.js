@@ -394,7 +394,7 @@ const About = () => {
             </p>
           </motion.div>
         </div>
-        <div className="flex flex-col justify-center md:flex-row justify-between w-full md:mt-8">
+        <div className="flex flex-col justify-center md:flex-row justify-between w-full md:mt-8 mb-8">
           <motion.div
             className="mx-3 mt-4 w-full h-auto md:w-2/5 "
             variants={sections4}
