@@ -1,9 +1,9 @@
-.row_About{
+/* .row_About{
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: space-between;
     margin-top: 60px;
-}
+} */
 .About_text{
     width:43%;
 }
@@ -22,3 +22,4 @@
 .text_about{
     width:50%;
 }
+
