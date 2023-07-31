@@ -100,8 +100,7 @@ const About = () => {
   // Determine when to trigger the animation based on visibility
   const missionAnimation = missionInView ? "visible" : "hidden";
   const visionAnimation = visionInView ? "visible" : "hidden";
-
-  const sections = {
+  const sections1 = {
     hidden: { scale: 0 },
     visible: {
       scale: 1,
@@ -113,11 +112,101 @@ const About = () => {
     },
   };
 
-  const [sectionRef, sectionInView] = useInView({
+  const [sectionRef1, sectionInView1] = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
-  const sectionAnimation = sectionInView ? "visible" : "hidden";
+  const sectionAnimation1 = sectionInView1 ? "visible" : "hidden";
+
+  const sections2 = {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const [sectionRef2, sectionInView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const sectionAnimation2 = sectionInView2 ? "visible" : "hidden";
+
+  const sections3 = {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const [sectionRef3, sectionInView3] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const sectionAnimation3 = sectionInView3 ? "visible" : "hidden";
+
+  const sections4 = {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const [sectionRef4, sectionInView4] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const sectionAnimation4 = sectionInView4 ? "visible" : "hidden";
+
+  const sections5 = {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const [sectionRef5, sectionInView5] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const sectionAnimation5 = sectionInView5 ? "visible" : "hidden";
+
+  const sections6 = {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const [sectionRef6, sectionInView6] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const sectionAnimation6 = sectionInView6 ? "visible" : "hidden";
 
   return (
     <section className=" overflow-x-hidden ">
@@ -250,11 +339,11 @@ const About = () => {
 
         <div className="flex flex-col justify-center md:flex-row justify-between mt-20 w-full">
           <motion.div
-            className="mx-3 p-8  w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3  w-full h-auto md:w-2/5 md:m-3"
             variants={sections}
             animate={sectionAnimation}
             initial="hidden"
-            ref={sectionRef}
+            ref={sectionRef1}
           >
             <h1 className="text-2xl font-bold  text-white">
               Specification Requirement
@@ -266,11 +355,11 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-            className="mx-3 p-8 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
             variants={sections}
             animate={sectionAnimation}
             initial="hidden"
-            ref={sectionRef}
+            ref={sectionRef2}
           >
             <h1 className="text-2xl font-bold  text-white">
               Wireframe and Design
@@ -282,11 +371,11 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-            className="mx-3 p-8 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
             variants={sections}
             animate={sectionAnimation}
             initial="hidden"
-            ref={sectionRef}
+            ref={sectionRef3}
           >
             <h1 className="text-2xl font-bold  text-white">
               Architecture and Database Design
@@ -300,11 +389,11 @@ const About = () => {
         </div>
         <div className="flex flex-col justify-center md:flex-row justify-between w-full md:mt-8">
           <motion.div
-            className="mx-3 p-8 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
             variants={sections}
             animate={sectionAnimation}
             initial="hidden"
-            ref={sectionRef}
+            ref={sectionRef4}
           >
             <h1 className="text-2xl font-bold  text-white">Development</h1>
             <p className="text-slate-400  font-medium mt-4">
@@ -314,11 +403,11 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-            className="mx-3 p-8 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
             variants={sections}
             animate={sectionAnimation}
             initial="hidden"
-            ref={sectionRef}
+            ref={sectionRef5}
           >
             <h1 className="text-2xl font-bold  text-white">Testing</h1>
             <p className="text-slate-400  font-medium mt-4">
@@ -328,11 +417,11 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-            className="mx-3 p-8 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
             variants={sections}
             animate={sectionAnimation}
             initial="hidden"
-            ref={sectionRef}
+            ref={sectionRef6}
           >
             <h1 className="text-2xl font-bold  text-white">Deployment</h1>
             <p className="text-slate-400  font-medium mt-4">
