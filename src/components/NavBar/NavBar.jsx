@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { VscChromeClose } from "react-icons/vsc";
+
 const NavBar = () => {
   const [selectedItem, setSelectItem] = useState(0);
   const [scrolling, setScrolling] = useState(false);
@@ -37,14 +39,27 @@ const NavBar = () => {
         </div>
         <div className="md:hidden">
           {/* Mobile Menu */}
-          <button
-            className={`text-white focus:outline-none ${
-              menuOpen ? "rotate-90	" : ""
-            }`}
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <GiHamburgerMenu />
-          </button>
+          {menuOpen && (
+            <button
+              className={`text-white focus:outline-none ${
+                menuOpen ? "rotate-90	" : ""
+              }`}
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <VscChromeClose className="text-white close-HamBurgerIcon text-2xl" />
+            </button>
+          )}
+
+          {!menuOpen &&
+            <button
+              className={`text-white focus:outline-none ${
+                menuOpen ? "rotate-90	" : ""
+              }`}
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <GiHamburgerMenu />
+            </button>
+          }
           <div
             className={`${
               menuOpen ? "block" : "hidden"
