@@ -1,32 +1,6 @@
 import React from "react";
 
 const Career = () => {
-  document.addEventListener("DOMContentLoaded", function () {
-    // To store actual height of every ".blog-post" div before making it "50px"
-    var totalNum = document.querySelectorAll(".blog-post").length; // Counting number of .blog-post div on page.
-    var i,
-      myArray = [];
-    for (i = 0; i < totalNum; i++) {
-      var curHeight = document.querySelectorAll(".blog-post")[i].offsetHeight;
-      myArray.push(curHeight);
-    }
-
-    var downArrows = document.querySelectorAll(".down-arrow");
-    downArrows.forEach(function (arrow) {
-      arrow.addEventListener("click", function () {
-        this.classList.toggle("invert");
-        var index = Array.from(downArrows).indexOf(arrow);
-        var blogPost = document.querySelectorAll(".blog-post")[index];
-        var heightCheck = blogPost.offsetHeight;
-        if (heightCheck < 51) {
-          blogPost.style.height = myArray[index] + "px";
-        } else {
-          blogPost.style.height = "50px";
-        }
-      });
-    });
-  });
-
   return (
     <div>
       <section id="career" className="career text-white p-4 md:p-24">
