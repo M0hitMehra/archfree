@@ -212,7 +212,7 @@ const About = () => {
     <section className=" overflow-x-hidden ">
       <div className="mx-4 md:mx-20 ">
         <div>This is About Section</div>
-        <div className="flex  justify-between mt-16">
+        <div className=" flex justify-between mt-16">
           <motion.div
             className="About_text"
             variants={leftColumnVariants}
@@ -254,7 +254,7 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-            className="About_image mt-20"
+            className="About_image  mt-20"
             variants={rightColumnVariants}
             initial="hidden"
             animate={rightColumnAnimation} // Use the determined animation
@@ -268,7 +268,7 @@ const About = () => {
           </motion.div>
         </div>
 
-        <div className=" md:flex justify-between mt-20">
+        <div className="about_section_2 flex justify-between mt-20">
           <motion.div
             className="img_about"
             variants={missionVariant}
