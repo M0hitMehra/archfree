@@ -317,7 +317,7 @@ const About = () => {
 
         <div className="flex justify-center items-center mt-20 flex-col">
           <motion.h1
-            className="text-5xl font-bold flex text-white "
+            className="text-5xl font-bold flex text-white about_section3_text"
             variants={containerVariants}
             initial="hidden"
             animate={containerAnimation}
@@ -328,7 +328,7 @@ const About = () => {
           <motion.img
             src="https://www.thearchertechnology.com/public/frontend/img/Software-Process-for-Project-Development.png"
             alt="Loading"
-            className="mt-20"
+            className="mt-20 about_section3_img"
             variants={containerVariants}
             initial="hidden"
             animate={containerAnimation}

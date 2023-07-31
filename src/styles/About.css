@@ -32,10 +32,16 @@
     }
     .text_about{
         width:100%;
-        margin-top: 22px;
+        margin-top: 30px;
     }
     .img_about{
         width:100%;
         /* margin-top: 5px; */
+    }
+    .about_section3_img{
+         width:50%;
+    }
+    .about_section3_text{
+        text-align: center;
     }
 }
