@@ -248,7 +248,7 @@ const About = () => {
           />
         </div>
 
-        <div className="flex justify-between mt-20 w-full">
+        <div className="flex flex-col justify-center md:flex-row justify-between mt-20 w-full">
           <motion.div
             className="m-3 w-2/5 h-auto "
             variants={sections}
