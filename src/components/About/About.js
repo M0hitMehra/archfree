@@ -212,7 +212,7 @@ const About = () => {
     <section className=" overflow-x-hidden ">
       <div className="mx-4 md:mx-20 ">
         <div>This is About Section</div>
-        <div className=" flex flex-row justify-between mt-16">
+        <div className="flex  justify-between mt-16">
           <motion.div
             className="About_text"
             variants={leftColumnVariants}
@@ -355,7 +355,7 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 mt-4 w-full h-auto md:w-2/5 "
             variants={sections2}
             animate={sectionAnimation2}
             initial="hidden"
@@ -371,7 +371,7 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 mt-4 w-full h-auto md:w-2/5 "
             variants={sections3}
             animate={sectionAnimation3}
             initial="hidden"
@@ -389,7 +389,7 @@ const About = () => {
         </div>
         <div className="flex flex-col justify-center md:flex-row justify-between w-full md:mt-8">
           <motion.div
-            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 mt-4 w-full h-auto md:w-2/5 "
             variants={sections4}
             animate={sectionAnimation4}
             initial="hidden"
@@ -403,7 +403,7 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 mt-4 w-full h-auto md:w-2/5 "
             variants={sections5}
             animate={sectionAnimation5}
             initial="hidden"
@@ -417,7 +417,7 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 mt-4 w-full h-auto md:w-2/5 "
             variants={sections6}
             animate={sectionAnimation6}
             initial="hidden"
