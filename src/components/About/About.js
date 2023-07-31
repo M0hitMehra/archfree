@@ -179,7 +179,7 @@ const About = () => {
           </motion.div>
         </div>
 
-        <div className="flex justify-between mt-20">
+        <div className=" md:flex justify-between mt-20">
           <motion.div
             className="img_about"
             variants={missionVariant}
@@ -250,7 +250,7 @@ const About = () => {
 
         <div className="flex flex-col justify-center md:flex-row justify-between mt-20 w-full">
           <motion.div
-            className="mx-3  w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 p-8  w-full h-auto md:w-2/5 md:m-3"
             variants={sections}
             animate={sectionAnimation}
             initial="hidden"
@@ -266,7 +266,7 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 p-8 mt-4 w-full h-auto md:w-2/5 md:m-3"
             variants={sections}
             animate={sectionAnimation}
             initial="hidden"
@@ -282,7 +282,7 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 p-8 mt-4 w-full h-auto md:w-2/5 md:m-3"
             variants={sections}
             animate={sectionAnimation}
             initial="hidden"
@@ -300,7 +300,7 @@ const About = () => {
         </div>
         <div className="flex flex-col justify-center md:flex-row justify-between w-full md:mt-8">
           <motion.div
-            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 p-8 mt-4 w-full h-auto md:w-2/5 md:m-3"
             variants={sections}
             animate={sectionAnimation}
             initial="hidden"
@@ -314,7 +314,7 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 p-8 mt-4 w-full h-auto md:w-2/5 md:m-3"
             variants={sections}
             animate={sectionAnimation}
             initial="hidden"
@@ -328,7 +328,7 @@ const About = () => {
             </p>
           </motion.div>
           <motion.div
-            className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
+            className="mx-3 p-8 mt-4 w-full h-auto md:w-2/5 md:m-3"
             variants={sections}
             animate={sectionAnimation}
             initial="hidden"
