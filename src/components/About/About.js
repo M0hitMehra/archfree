@@ -268,7 +268,7 @@ const About = () => {
           </motion.div>
         </div>
 
-        <div className="flex justify-between mt-20">
+        <div className=" md:flex justify-between mt-20">
           <motion.div
             className="img_about"
             variants={missionVariant}
@@ -340,8 +340,8 @@ const About = () => {
         <div className="flex flex-col justify-center md:flex-row justify-between mt-20 w-full">
           <motion.div
             className="mx-3  w-full h-auto md:w-2/5 md:m-3"
-            variants={sections1}
-            animate={sectionAnimation1}
+            variants={sections}
+            animate={sectionAnimation}
             initial="hidden"
             ref={sectionRef1}
           >
@@ -356,8 +356,8 @@ const About = () => {
           </motion.div>
           <motion.div
             className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
-            variants={sections2}
-            animate={sectionAnimation2}
+            variants={sections}
+            animate={sectionAnimation}
             initial="hidden"
             ref={sectionRef2}
           >
@@ -372,8 +372,8 @@ const About = () => {
           </motion.div>
           <motion.div
             className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
-            variants={sections3}
-            animate={sectionAnimation3}
+            variants={sections}
+            animate={sectionAnimation}
             initial="hidden"
             ref={sectionRef3}
           >
@@ -390,8 +390,8 @@ const About = () => {
         <div className="flex flex-col justify-center md:flex-row justify-between w-full md:mt-8">
           <motion.div
             className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
-            variants={sections4}
-            animate={sectionAnimation4}
+            variants={sections}
+            animate={sectionAnimation}
             initial="hidden"
             ref={sectionRef4}
           >
@@ -404,8 +404,8 @@ const About = () => {
           </motion.div>
           <motion.div
             className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
-            variants={sections5}
-            animate={sectionAnimation5}
+            variants={sections}
+            animate={sectionAnimation}
             initial="hidden"
             ref={sectionRef5}
           >
@@ -418,8 +418,8 @@ const About = () => {
           </motion.div>
           <motion.div
             className="mx-3 mt-4 w-full h-auto md:w-2/5 md:m-3"
-            variants={sections6}
-            animate={sectionAnimation6}
+            variants={sections}
+            animate={sectionAnimation}
             initial="hidden"
             ref={sectionRef6}
           >
