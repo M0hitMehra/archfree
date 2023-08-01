@@ -100,7 +100,7 @@ h6 {
   /* visibility: hidden; */
   display: flex;
   justify-content: space-around;
-  bottom: -10%;
+  bottom: -11%;
   gap: 10px;
   transition: all 0.3s linear;
 }
