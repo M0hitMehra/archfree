@@ -96,7 +96,7 @@ h6 {
 
 
 
-.social{
+.social {
   /* visibility: hidden; */
   display: flex;
   justify-content: space-around;
@@ -104,15 +104,16 @@ h6 {
   gap: 10px;
   transition: all 0.3s linear;
 }
-.member-img:hover img{
+
+.member-img:hover img {
   filter: blur(2px);
 }
 
-.member-img:hover .social{
-/* visibility: visible; */
- bottom: 10%;
+.member-img:hover .social {
+  /* visibility: visible; */
+  bottom: 10%;
 }
 
-.social > svg{
+.social>svg {
   font-size: 2rem;
 }
