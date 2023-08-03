@@ -7,8 +7,11 @@ import CTA from "./CTA";
 import HomeContact from "./HomeContact";
 
 const Home = () => {
+ 
   return (
     <div className=" overflow-x-hidden ">
+
+
       {/* main Part with image */}
       <Hero />
 

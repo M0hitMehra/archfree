@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Modal from "./Modal/Modal";
 
 const Services = () => {
   // Services
@@ -94,11 +95,45 @@ const Services = () => {
   });
   const sectionAnimation5 = sectionInView5 ? "visible" : "hidden";
 
+  const [modalOpen, setModalOpen] = useState(false);
+  const [data, setData] = useState({
+    image: "",
+    heading: "",
+    content: "",
+  });
+
+  const handleOpenModal = (image, heading, content) => {
+    setModalOpen(true);
+    setData({
+      image,
+      heading,
+      content,
+    });
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <section
       id="services"
       className="services text-white xl:p-24 md:p-7 px-2 pt-4 "
     >
+      {modalOpen && (
+        <Modal isOpen={modalOpen} onClose={handleCloseModal}>
+          <div className="flex flex-col justify-between gap-6 p-10">
+            <div className="flex flex-col justify-center items-center gap-5">
+                <img src={data.image} alt="" className="h-24 w-24 bg-yellow-400 p-4 rounded-lg hover:bg-yellow-300" />
+                <h1 className="text-black text-2xl font-semibold">{data.heading}</h1>
+            </div>
+            <div className="text-slate-700 font-serif tracking-wider leading-10 text-xl">
+          {data.content}
+            </div>
+          </div>
+        </Modal>
+      )}
+
       <div className="container ">
         <div className="section-title mb-12">
           <h2 className="text-xl font-bold text-slate-300">Services</h2>
@@ -120,10 +155,20 @@ const Services = () => {
               }} // Hover effect
               initial="hidden"
               ref={sectionRef1}
+              onClick={() =>
+                handleOpenModal(
+                  "https://www.thearchertechnology.com/public/frontend/img/server.png",
+                  "Web Development",
+                  `Your website is the face of your business. The importance of
+              having a business website is to have a strong 24/7 online
+              presence of your business and all are possible at Archer
+              Technology, a leading Web development company.`
+                )
+              }
             >
               <div className=" h-24 w-24 p-1 flex items-center rounded-lg  justify-center bg-yellow-400 ">
                 <img
-                  src="	https://www.thearchertechnology.com/public/frontend/img/server.png"
+                  src="https://www.thearchertechnology.com/public/frontend/img/server.png"
                   alt="Web Development"
                   className="   "
                 />
@@ -151,6 +196,16 @@ const Services = () => {
               }} // Hover effect
               initial="hidden"
               ref={sectionRef2}
+              onClick={() =>
+                handleOpenModal(
+                  "https://www.thearchertechnology.com/public/frontend/img/digital-marketing.png",
+                  "Digital Marketing",
+                  ` Looking for a Digital Marketing Agency to help you create a
+                  strong online presence for your business? With our digital
+                  marketing services, you get more bang for your hard-earned
+                  buck.`
+                )
+              }
             >
               <div className=" h-24 w-24 p-1 flex items-center rounded-lg  justify-center bg-yellow-400 ">
                 <img
@@ -182,6 +237,15 @@ const Services = () => {
               }} // Hover effect
               initial="hidden"
               ref={sectionRef3}
+              onClick={() =>
+                handleOpenModal(
+                  "https://www.thearchertechnology.com/public/frontend/img/graphics.png",
+                  "Graphics Design",
+                  `Our Graphics designer can enhance any website to convert into
+                  the beautiful layout, Mobile app interface, Logo Design and
+                  many more.`
+                )
+              }
             >
               <div className=" h-24 w-24 p-1 flex rounded-lg  items-center justify-center bg-yellow-400 ">
                 <img
@@ -214,6 +278,16 @@ const Services = () => {
               }} // Hover effect
               initial="hidden"
               ref={sectionRef4}
+              onClick={() =>
+                handleOpenModal(
+                  "https://www.thearchertechnology.com/public/frontend/img/mobile%20(1).png",
+                  "Mobile Apps Development",
+                  `Every business aims to increase their audience base, brand
+                  popularity, sales, and revenue generation. A mobile application
+                  is capable of doing all these and helps businesses find multiple
+                  growth opportunities and generate hefty revenues.`
+                )
+              }
             >
               <div className="h-24 w-24 p-1 bg-yellow-400 flex rounded-lg justify-center items-center ">
                 <img
@@ -246,6 +320,17 @@ const Services = () => {
               // Hover effect
               initial="hidden"
               ref={sectionRef5}
+              onClick={() =>
+                handleOpenModal(
+                  "https://www.thearchertechnology.com/public/frontend/img/software.png",
+                  "Software Development",
+                  ` Software is very important for businesses as it helps them
+                  distinguish from competitors and become more competitive.
+                  Software developed at Archer Technology can improve the client’s
+                  experiences, bring more feature-rich and innovative products to
+                  market, and make more safe, productive, and efficient.`
+                )
+              }
             >
               {" "}
               <div className="h-24 w-24 p-1 bg-yellow-400 flex rounded-lg justify-center items-center ">
