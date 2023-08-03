@@ -2,8 +2,79 @@ import React, { useEffect, useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { TfiEmail } from "react-icons/tfi";
 import { BsPhone } from "react-icons/bs";
+import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
+import { FaSpinner } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [fullname, setFullname] = useState();
+  const [mobile, setMobile] = useState();
+  const [email, setEmail] = useState();
+  const [msg, setMsg] = useState();
+
+  const [sendClick, setSendClick] = useState(false);
+
+  const formHandler = (e) => {
+    e.preventDefault();
+    setSendClick(true);
+    // console.log(sendClick);
+    if (!fullname || !mobile || !email || !msg) {
+      toast.error("Error, Please fill all the required input", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      setSendClick(false);
+
+      return;
+    }
+    emailjs
+      .send(
+        "service_0tuqh8g",
+        "template_cvxfvdh",
+        {
+          fullname,
+          mobile,
+          email,
+          msg,
+        },
+        "S_cbVajV-tGdqEUxa"
+      )
+      .then(function (response) {
+        toast.success("Email sent successfully", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        setSendClick(false);
+      })
+      .catch((err) => {
+        setSendClick(false);
+
+        toast.error("Error, Please try again", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      });
+  };
+
   return (
     <div>
       <section id="contact" className="contact text-white p-4 md:p-24">
@@ -81,6 +152,7 @@ const Contact = () => {
                 role="form"
                 className="php-email-form flex flex-col gap-5"
                 noValidate="novalidate"
+                onSubmit={formHandler}
               >
                 <div className="flex gap-5">
                   <div className="form-group w-full">
@@ -90,8 +162,9 @@ const Contact = () => {
                       className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
                       id="name"
                       placeholder="Your Name"
-                      required=""
-                      aria-invalid="true"
+                      required
+                      value={fullname}
+                      onChange={(e) => setFullname(e.target.value)}
                     />
                   </div>
                   <div className="form-group w-full">
@@ -101,15 +174,9 @@ const Contact = () => {
                       name="email"
                       id="email"
                       placeholder="Your Email"
-                      required=""
-                      style={{
-                        backgroundImage: "url('data:image/png;base64,...')",
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "20px",
-                        backgroundPosition: "97% center",
-                        cursor: "auto",
-                      }}
-                      aria-invalid="false"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                 </div>
@@ -120,27 +187,43 @@ const Contact = () => {
                     name="mobile"
                     id="mobile"
                     placeholder="Your Mobile"
-                    required=""
+                    required
+                    value={mobile}
+                    onChange={(e) => setMobile(e.target.value)}
                   />
                 </div>
                 <div className="form-group w-full">
                   <textarea
-                    className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
+                    className="form-control w-full p-2 text-black rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
                     name="msg"
                     rows="5"
                     placeholder="Your Ideas/Message"
-                    required=""
+                    required={true}
+                    value={msg}
+                    onChange={(e) => setMsg(e.target.value)}
                   ></textarea>
                 </div>
 
-                <div className="sent-message mt-3" id="notidiv"></div>
-                <div className="text-center mt-4">
-                  <button
-                    id="save"
-                    className="btn bg-yellow-500 hover:bg-yellow-400 px-3 py-2 rounded-md text-black"
-                  >
-                    Send Message
-                  </button>
+                <div className="text-center">
+                  {!sendClick ? (
+                    <input
+                      type="submit"
+                      value={"Send"}
+                      id="save"
+                      className="btn  px-8 py-2 mt-4 mx-10  bg-yellow-500  hover:bg-yellow-400  rounded-md text-black"
+                    />
+                  ) : (
+                    <motion.div
+                      style={{
+                        display: "inline-block",
+                        rotate: "360deg",
+                        animation: "spin 1s linear infinite", // Define the animation using keyframes
+                      }}
+                      className="  px-8 py-2 mt-4 mx-10 "
+                    >
+                      <FaSpinner />
+                    </motion.div>
+                  )}
                 </div>
               </form>
             </div>

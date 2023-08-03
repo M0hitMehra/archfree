@@ -12,6 +12,15 @@
   background-attachment: fixed;
   scroll-behavior: smooth;
 }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 .navbar {
   box-shadow: rgba(3, 101, 214, 0.544) 0px 0px 0px 3px;
