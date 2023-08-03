@@ -181,7 +181,7 @@ const HomeContact = () => {
               <div className="form-group w-full">
                 <input
                   type="text"
-                  className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm xl:text-base"
+                  className="form-control text-black w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm xl:text-base"
                   name="mobile"
                   id="mobile"
                   placeholder="Your Mobile"
