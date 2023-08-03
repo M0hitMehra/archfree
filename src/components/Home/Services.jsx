@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Modal from "./Modal/Modal";
-
+import { Link } from "react-router-dom";
+import { RiMailSendLine } from "react-icons/ri";
+import { MdClose } from "react-icons/md";
 const Services = () => {
   // Services
   const sections1 = {
@@ -122,13 +124,32 @@ const Services = () => {
     >
       {modalOpen && (
         <Modal isOpen={modalOpen} onClose={handleCloseModal}>
-          <div className="flex flex-col justify-between gap-6 p-10">
+          <div className="flex flex-col justify-between gap-6 px-10 py-2">
             <div className="flex flex-col justify-center items-center gap-5">
-                <img src={data.image} alt="" className="h-24 w-24 bg-yellow-400 p-4 rounded-lg hover:bg-yellow-300" />
-                <h1 className="text-black text-2xl font-semibold">{data.heading}</h1>
+              <img
+                src={data.image}
+                alt=""
+                className="h-24 w-24 bg-yellow-400 p-4 rounded-lg hover:bg-yellow-300"
+              />
+              <h1 className="text-black text-2xl font-semibold">
+                {data.heading}
+              </h1>
             </div>
-            <div className="text-slate-700 font-serif tracking-wider leading-10 text-xl">
-          {data.content}
+            <div className="flex flex-col gap-4">
+              <div className="text-slate-700 font-serif md:tracking-wider md:leading-10 text-xl">
+                {data.content}
+              </div>
+              <div className="flex gap-10 justify-around border-t-2 pt-4 border-black">
+                <Link
+                  to={"/contact"}
+                  className="flex items-center gap-2 justify-center bg-blue-600 md:px-6 md:py-2 px-2 py-1 text-xl rounded-lg hover:bg-blue-400"
+                >
+                  Contact Us <RiMailSendLine />
+                </Link>
+                <button onClick={handleCloseModal} className="flex items-center gap-2 justify-center bg-red-500 md:px-6 md:py-2 px-2 py-1 text-xl rounded-lg hover:bg-red-400">
+                  Close <MdClose />
+                </button>
+              </div>
             </div>
           </div>
         </Modal>
