@@ -8,7 +8,7 @@ const NavBar = () => {
   const [selectedItem, setSelectItem] = useState(0);
   const [scrolling, setScrolling] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false); // Add this state variable
-
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       // Add a scroll event listener and update the "scrolling" state
@@ -138,11 +138,31 @@ const NavBar = () => {
             Home
           </Link>
           <Link
-            className={`link ${selectedItem === 1 ? "active" : ""}`}
+            className={`link ${selectedItem === 1 ? "active" : ""} relative `}
             to="/about"
-            onClick={() => setSelectItem(1)}
+            onMouseLeave={() => setOpen(false)} onClick={() => setSelectItem(1)}
           >
-            About Us
+             <button
+          onMouseOver={() => setOpen(true)}
+          className=""
+        >
+          <span className="">About Us</span>
+        </button>
+        <ul
+          className={`absolute w-40 py-2 bg-white text-black   rounded-lg shadow-xl ${
+            open ? "block" : "hidden"
+          }`}
+        >
+          <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100">
+            Dropdown List 1
+          </li>
+          <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100">
+            Dropdown List 2
+          </li>
+          <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100">
+            Dropdown List 3
+          </li>
+        </ul>
           </Link>
           <Link
             className={`link ${selectedItem === 2 ? "active" : ""}`}
