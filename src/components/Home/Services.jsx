@@ -124,7 +124,7 @@ const Services = () => {
     >
       {modalOpen && (
         <Modal isOpen={modalOpen} onClose={handleCloseModal}>
-          <div className="flex flex-col justify-between gap-6 px-10 py-2">
+          <div className="flex flex-col justify-between gap-6 px-2 md:px-10 py-2">
             <div className="flex flex-col justify-center items-center gap-5">
               <img
                 src={data.image}
@@ -136,7 +136,7 @@ const Services = () => {
               </h1>
             </div>
             <div className="flex flex-col gap-4">
-              <div className="text-slate-700 font-serif md:tracking-wider md:leading-10 text-xl">
+              <div className="text-slate-700 font-serif md:tracking-wide md:leading-10 text-xl">
                 {data.content}
               </div>
               <div className="flex gap-10 justify-around border-t-2 pt-4 border-black">
