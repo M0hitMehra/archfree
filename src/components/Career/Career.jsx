@@ -8,18 +8,18 @@ import {
 } from "@material-tailwind/react";
 
 function Icon({ id, open }) {
-     if(open === 1){
-      let  content = document.getElementsByClassName('content');
-      for(var i=0; i<content.length; i++){
-        content[i].style.display = "block";
-      }}
-      else {
-        let  content = document.getElementsByClassName('content');
-        for(var i=0; i<content.length; i++){
-          content[i].style.display = "none";
-        }
-       }
-  
+  if (open === 1) {
+    let content = document.getElementsByClassName("content");
+    for (var i = 0; i < content.length; i++) {
+      content[i].style.display = "block";
+    }
+  } else {
+    let content = document.getElementsByClassName("content");
+    for (var i = 0; i < content.length; i++) {
+      content[i].style.display = "none";
+    }
+  }
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,6 @@ function Icon({ id, open }) {
         d="M19.5 8.25l-7.5 7.5-7.5-7.5"
       />
     </svg>
-    
   );
 }
 
@@ -57,97 +56,56 @@ const Career = () => {
             </p>
           </div>
           <div className="flex flex-wrap carrer_col">
-            {/* <div className="blog-post border-2 border-gray rounded p-10 w-full max-w-lg">
-              <h3 className="text-white text-xl font-medium">
-                Business Development Executive <br />
-                Experience - 1 to 3
-              </h3>
-              <p className="text-white text-xl font-medium mt-6">
-                Number of vacancies:1
-              </p>
-              <ul className="list-disc mt-8">
-                <li className="text-2xl text-slate-400 font-medium">
-                  Degree in marketing, business administration, or similar.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Extensive sales experience.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Intuitive and insightful, particularly regarding human
-                  behavior.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Ability to generate revenue by identifying pain points and
-                  suggesting suitable products or services.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Professional yet affable disposition.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Neat, well-groomed appearance.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Great networking skills.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Excellent written and verbal communication.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Resourceful, with outstanding research skills.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Emboldened by challenges.
-                </li>
-              </ul>
-            </div> */}
-             <div className="blog-post border-2 border-gray rounded   p-8 w-full max-w-lg">
-            <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-              <AccordionHeader onClick={() => handleOpen(1)}  >
-              <h3 className="text-white text-xl font-medium">
-                Business Development Executive <br/>
-                <span className="relative right-16 experience" >Experience - 1 to 3</span>
-              </h3>
-              </AccordionHeader>
-              <AccordionBody>
-              <p className="text-white text-xl font-medium content hidden">
-                Number of vacancies:1
-              </p>
-              <ul  className= "list-disc mt-2  content hidden">
-                <li className="text-2xl text-slate-400 font-medium">
-                  Degree in marketing, business administration, or similar.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Extensive sales experience.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Intuitive and insightful, particularly regarding human
-                  behavior.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Ability to generate revenue by identifying pain points and
-                  suggesting suitable products or services.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Professional yet affable disposition.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Neat, well-groomed appearance.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Great networking skills.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Excellent written and verbal communication.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Resourceful, with outstanding research skills.
-                </li>
-                <li className="text-2xl text-slate-400 font-medium">
-                  Emboldened by challenges.
-                </li>
-              </ul>
-              </AccordionBody>
-            </Accordion>
+            <div className={`blog-post  border-${open ===1 ?"2":"0"} accord__conatiner border-gray rounded   p-8 w-full max-w-lg`}>
+              <Accordion open={open === 1} icon={<Icon id={1} open={open} />} className=" ">
+                <AccordionHeader onClick={() => handleOpen(1)} className={` accor__header  p-8  border-${open !==1 ?"2":"0"} `} >
+                  <h3 className="text-white text-xl font-medium">
+                    Business Development Executive <br />
+                    <span className="relative right-16 experience">
+                      Experience - 1 to 3
+                    </span>
+                  </h3>
+                </AccordionHeader>
+                <AccordionBody className={`  accord__conatiner__body  ${open!==1 ?"hidden":"visible"}`}>
+                  <p className="text-white text-xl font-medium content hidden">
+                    Number of vacancies:1
+                  </p>
+                  <ul className="list-disc mt-2  content hidden">
+                    <li className="text-2xl text-slate-400 font-medium">
+                      Degree in marketing, business administration, or similar.
+                    </li>
+                    <li className="text-2xl text-slate-400 font-medium">
+                      Extensive sales experience.
+                    </li>
+                    <li className="text-2xl text-slate-400 font-medium">
+                      Intuitive and insightful, particularly regarding human
+                      behavior.
+                    </li>
+                    <li className="text-2xl text-slate-400 font-medium">
+                      Ability to generate revenue by identifying pain points and
+                      suggesting suitable products or services.
+                    </li>
+                    <li className="text-2xl text-slate-400 font-medium">
+                      Professional yet affable disposition.
+                    </li>
+                    <li className="text-2xl text-slate-400 font-medium">
+                      Neat, well-groomed appearance.
+                    </li>
+                    <li className="text-2xl text-slate-400 font-medium">
+                      Great networking skills.
+                    </li>
+                    <li className="text-2xl text-slate-400 font-medium">
+                      Excellent written and verbal communication.
+                    </li>
+                    <li className="text-2xl text-slate-400 font-medium">
+                      Resourceful, with outstanding research skills.
+                    </li>
+                    <li className="text-2xl text-slate-400 font-medium">
+                      Emboldened by challenges.
+                    </li>
+                  </ul>
+                </AccordionBody>
+              </Accordion>
             </div>
             <div className="">
               <form className="w-full max-w-lg border-2 border-gray rounded p-8 ml-10 carrer_form">

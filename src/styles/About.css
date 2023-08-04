@@ -22,7 +22,10 @@
 .text_about{
     width:50%;
 }
-
+.accord__conatiner__body{
+    transition: all 1s linear;
+}
+ 
 @media only screen and (max-width: 600px){
     .about_section_2{
         display: flex;
