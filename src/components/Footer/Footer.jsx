@@ -3,13 +3,18 @@ import { IoLogoFacebook } from "react-icons/io";
 import { IoLogoLinkedin } from "react-icons/io";
 import { IoLogoTwitter } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
+import logo  from "../../assets/logoArch.png"
+
 const Footer = () => {
   return (
     <div>
       <footer className="bg-[#0e1629] md:p-1 p-3">
         <div className="flex flex-col md:flex-row justify-around py-8 md:py-14">
           <div className="flex flex-col mt-6 mb-8 md:mt-14 md:mb-0">
-            <h1 className="text-white text-lg md:text-2xl font-bold">Logo</h1>
+            <img
+              src={logo}
+              className=" text-white w-24 h-24 mt-[-30px] text-lg md:text-2xl font-bold"
+            />{" "}
             <p className="text-white mt-6">
               F-15, 1st Floor, Angel Lords Hotel, Old
               <br />

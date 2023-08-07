@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
+import logo  from "../../assets/logoArch.png"
+
 
 const NavBar = () => {
   const [selectedItem, setSelectItem] = useState(0);
@@ -39,9 +41,9 @@ const NavBar = () => {
         true ? "bg-[#0e1629] h-[5rem]" : "bg-transparent"
       } `}
     >
-      <nav className="flex justify-between items-center bg-[#0e1629] h-[4rem] px-4 md:px-24 py-3 md:py-4">
-        <div className="logo text-white text-lg md:text-2xl font-bold">
-          Logo
+      <nav className="flex justify-between items-center  bg-[#0e1629] h-[4rem] px-4 md:px-24 py-3 md:py-4">
+        <div className="logo text-white flex items-center justify-center text-lg md:text-2xl font-bold">
+          <img src={logo} className=" logo-img w-20  hover:scale-110 h-20 rounded-3xl" alt="" />
         </div>
         <div className="md:hidden">
           {/* Mobile Menu */}

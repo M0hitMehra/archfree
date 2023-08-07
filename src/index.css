@@ -26,6 +26,15 @@
   box-shadow: rgba(3, 101, 214, 0.544) 0px 0px 0px 3px;
 }
 
+.logo-img{
+  /* object-fit: contain; */
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  /* mix-blend-mode: multiply; */
+  margin-top: 10px;
+  filter: drop-shadow(1px 1px 5px white);
+}
+
 #hero {
   width: 100%;
   height: 100vh;
