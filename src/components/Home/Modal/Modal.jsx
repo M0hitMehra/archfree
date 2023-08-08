@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Modal = ({ isOpen, onClose, children }) => {
   return (
     <div
-      className={`fixed md:p-32 xl:p-44 inset-0 z-50 flex items-center justify-center transition-opacity ${
+      className={`fixed overflow-y-auto md:p-2 xl:p-44 inset-0 z-50 flex items-center justify-center transition-opacity ${
         isOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none hidden opacity-0'
       }`}
     >
@@ -20,7 +20,7 @@ const Modal = ({ isOpen, onClose, children }) => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.5 }}
-        className="relative bg-[#ffeeec] rounded-lg p-4  shadow-xl shadow-gray-600 "
+        className="relative bg-[#ffeeec] rounded-lg md:p-0 xl:p-4 p-2  shadow-xl shadow-gray-600 "
       >
         {children}
       </motion.div>
