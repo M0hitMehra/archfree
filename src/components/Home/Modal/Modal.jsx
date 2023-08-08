@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Modal = ({ isOpen, onClose, children }) => {
   return (
     <div
-      className={`fixed md:p-32 xl:p-96 inset-0 z-50 flex items-center justify-center transition-opacity ${
+      className={`fixed md:p-32 xl:p-44 inset-0 z-50 flex items-center justify-center transition-opacity ${
         isOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none hidden opacity-0'
       }`}
     >

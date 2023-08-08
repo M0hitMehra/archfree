@@ -25,7 +25,7 @@ const Hero = () => {
                 initial="hidden"
                 animate="visible"
               >
-                WELCOME TO ARCHER TECHNOLOGY
+                WELCOME TO Secure Hire
                 <span className="text-[#ffc451]">.</span>
               </motion.div>
               <motion.h2

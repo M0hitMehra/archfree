@@ -72,11 +72,10 @@ const Features = () => {
               <PiScrollDuotone />
             </i>
             <div className="flex flex-col gap-3">
-              <h4 className="text-xl xl:text-4xl font-bold">Our Mission</h4>
+              <h4 className="text-xl xl:text-4xl font-bold">Who We Are:</h4>
               <p className="text-slate-400 text-md xl:text-xl">
-                Every software product that we develop is built with assured
-                quality and exhibits excellence in its core aspects. We ensure
-                that our clients get what they need to fulfill their aims.
+              We are a dynamic and innovative digital marketing agency with a mission to empower businesses of all sizes to achieve their digital marketing goals. With years of industry expertise and a customer-centric approach, we have successfully partnered with diverse clients across various industries, delivering impactful digital marketing campaigns.
+
               </p>
             </div>
           </div>
@@ -85,12 +84,9 @@ const Features = () => {
               <BiCubeAlt />
             </i>
             <div className="flex flex-col gap-3">
-              <h4 className="text-xl xl:text-4xl font-bold">Our Vision</h4>
+              <h4 className="text-xl xl:text-4xl font-bold">What We Do:</h4>
               <p className="text-slate-400 text-md xl:text-xl">
-                We analyze your future business challenges and develop creative
-                and innovative digital solutions to encounter every problem that
-                arises in business with ease for you to enjoy streamlined
-                business operations.
+              Our comprehensive range of digital marketing services covers every aspect of your online journey. From crafting engaging content to optimizing websites content for search engines, Graphics Design, Digital Marketing, Recruitment, etc. we all have covered.
               </p>
             </div>
           </div>

@@ -86,7 +86,7 @@ const HomeContact = () => {
           </p>
         </div>
 
-        <div className="">
+        {/* <div className="">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7419.02598295401!2d71.2269608977129!3d21.6049250781877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395880c5a8ae72db%3A0x3367f8679c1c86eb!2sAngel%20Lords%20Eco%20Inn%20Amreli!5e0!3m2!1sen!2sin!4v1670677249636!5m2!1sen!2sin"
             width="100%"
@@ -96,11 +96,11 @@ const HomeContact = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 mt-6 ">
-          <div className="info xl:col-span-4 h-auto flex flex-col justify-between gap-7">
-            <div className="address flex items-center gap-4 ">
+          <div className="info xl:col-span-4 h-auto flex flex-col justify-evenly gap-7">
+            {/* <div className="address flex items-center gap-4 ">
               <div className="bg-yellow-400 px-3 py-1 rounded-md mt-[-40px]">
                 <CiLocationOn className="text-black h-8 w-4" />
               </div>
@@ -113,7 +113,7 @@ const HomeContact = () => {
                   Amreli, Gujarat, India, 365601
                 </p>
               </div>
-            </div>
+            </div> */}
 
             <div className="email flex items-center gap-4 ">
               <div className="bg-yellow-400 px-3 py-1 rounded-md">
