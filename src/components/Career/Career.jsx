@@ -6,7 +6,7 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-
+import "../../styles/About.css";
 function Icon({ id, open }) {
   if (open === 1) {
     let content = document.getElementsByClassName("content");
@@ -121,7 +121,7 @@ const Career = () => {
                       First Name
                     </label>
                     <input
-                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                       id="grid-first-name"
                       type="text"
                       placeholder="Jane"

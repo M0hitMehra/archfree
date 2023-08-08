@@ -26,6 +26,19 @@
     transition: all 1s linear;
 }
  
+.triangle {
+    position: absolute;
+    top: -10px;
+    left: 12%;
+    margin-top:4px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+  }
+
 @media only screen and (max-width: 600px){
     .about_section_2{
         display: flex;

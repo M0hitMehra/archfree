@@ -207,20 +207,21 @@ const NavBar = () => {
           <span className="">About Us</span>
         </button>
         <ul
-          className={`absolute w-40 py-2 bg-white text-black   rounded-lg shadow-xl ${
+          className={`absolute w-40 py-2 bg-white text-black mt-1  rounded-lg shadow-xl ${
             open ? "block" : "hidden"
-          }`}
-        >
-          <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100">
+          }`}>
+            <div className="triangle"></div>
+          <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1">
             Dropdown List 1
           </li>
-          <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100">
+          <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1">
             Dropdown List 2
           </li>
-          <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100">
+          <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1 ">
             Dropdown List 3
           </li>
         </ul>
+
           </Link>
           <Link
             className={`link ${selectedItem === 2 ? "active" : ""}`}
