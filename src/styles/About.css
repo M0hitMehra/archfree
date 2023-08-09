@@ -22,6 +22,9 @@
 .text_about{
     width:50%;
 }
+/* .accord__conatiner{
+    padding: 1rem;
+   } */
 .accord__conatiner__body{
     transition: all 1s linear;
 }
@@ -87,5 +90,8 @@
        .experience{
         position:relative;
         right:0;
+       }
+       .accord__conatiner{
+        padding: 0px;
        }
 }

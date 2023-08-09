@@ -56,7 +56,7 @@ const Career = () => {
             </p>
           </div>
           <div className="flex flex-wrap carrer_col">
-            <div className={`blog-post  border-${open ===1 ?"2":"0"} accord__conatiner border-gray rounded   p-8 w-full max-w-lg`}>
+            <div className={`blog-post  border-${open ===1 ?"2":"0"} accord__conatiner border-gray rounded  max-w-lg  w-full `}>
               <Accordion open={open === 1} icon={<Icon id={1} open={open} />} className=" ">
                 <AccordionHeader onClick={() => handleOpen(1)} className={` accor__header  p-8  border-${open !==1 ?"2":"0"} `} >
                   <h3 className="text-white text-xl font-medium">
@@ -66,7 +66,7 @@ const Career = () => {
                     </span>
                   </h3>
                 </AccordionHeader>
-                <AccordionBody className={`  accord__conatiner__body  ${open!==1 ?"hidden":"visible"}`}>
+                <AccordionBody className={`p-8  accord__conatiner__body  ${open!==1 ?"hidden":"visible"}`}>
                   <p className="text-white text-xl font-medium content hidden">
                     Number of vacancies:1
                   </p>
