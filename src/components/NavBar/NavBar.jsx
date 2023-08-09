@@ -213,7 +213,7 @@ const NavBar = () => {
             <div className="triangle"></div>
           <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1">
           <Link
-            className={`link ${selectedItem === 1 ? "active" : ""}`}
+            className={`link ${selectedItem === 1 ? "text-red" : ""}`}
             to="/about"
             onClick={() => setSelectItem(1)}
           >
