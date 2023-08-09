@@ -6,6 +6,10 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
+import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
+import { FaSpinner } from "react-icons/fa";
+import { motion } from "framer-motion";
 import "../../styles/About.css";
 function Icon({ id, open }) {
   if (open === 1) {
@@ -44,6 +48,78 @@ const Career = () => {
   const [open, setOpen] = React.useState(0);
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
+
+  const [firstname, setFirstname] = useState();
+  const [lastname, setLastname] = useState();
+  const [email, setEmail] = useState();
+  const [phone_number, setPhone] = useState();
+  const [Position, setPosition] = useState();
+  const [file_input, setFile] = useState();
+
+  const [sendClick, setSendClick] = useState(false);
+
+  const applyformHandler = (e) => {
+    e.preventDefault();
+    setSendClick(true);
+    // console.log(sendClick);
+    if (!firstname || !lastname || !email || !phone_number || !Position || !file_input) {
+      toast.error("Error, Please fill all the required input", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      setSendClick(false);
+
+      return;
+    }
+    emailjs
+      .send(
+        "service_0tuqh8g",
+        "template_cvxfvdh",
+        {
+          firstname,
+          lastname,
+          email,
+          phone_number,
+          Position,
+          file_input,
+        },
+        "S_cbVajV-tGdqEUxa"
+      )
+      .then(function (response) {
+
+        toast.success("Email sent successfully", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        setSendClick(false);
+      })
+      .catch((err) => {
+        setSendClick(false);
+
+        toast.error("Error, Please try again", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      });
+  };
 
   return (
     <div>
@@ -108,7 +184,9 @@ const Career = () => {
               </Accordion>
             </div>
             <div className="">
-              <form className="w-full max-w-lg border-2 border-gray rounded p-8 ml-10 carrer_form">
+              <form className="w-full max-w-lg border-2 border-gray rounded p-8 ml-10 carrer_form"  noValidate="novalidate"
+                onSubmit={applyformHandler} id="applyform"
+                role="form">
                 <h3 className="text-2xl font-bold text-white mb-2 ">
                   APPLY NOW
                 </h3>
@@ -122,9 +200,10 @@ const Career = () => {
                     </label>
                     <input
                       className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                      id="grid-first-name"
+                      id="firstname" name="firstname"
                       type="text"
-                      placeholder="Jane"
+                      placeholder="Jane" value={firstname}
+                      onChange={(e) => setFirstname(e.target.value)}
                     />
                   </div>
                   <div className="w-full md:w-1/2 px-3">
@@ -136,9 +215,10 @@ const Career = () => {
                     </label>
                     <input
                       className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="grid-last-name"
+                      id="lastname" name="lastname"
                       type="text"
-                      placeholder="Doe"
+                      placeholder="Doe" value={lastname}
+                      onChange={(e) => setLastname(e.target.value)}
                     />
                   </div>
                 </div>
@@ -153,8 +233,10 @@ const Career = () => {
                     <input
                       className=" block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       id="email"
+                      name="email"
                       type="email"
-                      placeholder="xyz@gmail.com"
+                      placeholder="xyz@gmail.com" value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                 </div>
@@ -169,8 +251,9 @@ const Career = () => {
                     <input
                       className=" block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 [&::-webkit-inner-spin-button]:appearance-none"
                       id="phone_number"
-                      type="number"
-                      placeholder="Phone number"
+                      type="number" name="phone_number"
+                      placeholder="Phone number" value={phone_number}
+                      onChange={(e) => setPhone(e.target.value)}
                     />
                   </div>
                 </div>
@@ -185,7 +268,8 @@ const Career = () => {
                     <div className="relative">
                       <select
                         className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="grid-state"
+                        id="Position" name="Position" value={Position}
+                        onChange={(e) => setPosition(e.target.value)}
                       >
                         <option>Select Position</option>
                         <option>PHP Developer</option>
@@ -213,18 +297,31 @@ const Career = () => {
                     </label>
                     <input
                       className="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="file_input"
-                      type="file"
+                      id="file_input" name="file_input"
+                      type="file" value={file_input}
+                      onChange={(e) => setFile(e.target.value)}
                     />
                   </div>
                 </div>
                 <div className="text-center mt-4 flex justify-end ">
-                  <button
-                    id="save"
+                {!sendClick ? (<button
+                    id="save"  type="submit"
+                    value={"Send"}
                     className="btn bg-yellow-500 hover:bg-yellow-400 px-4 py-3 rounded-md text-black text-xl font-medium"
                   >
                     Apply Now
-                  </button>
+                  </button>) : (
+                    <motion.div
+                      style={{
+                        display: "inline-block",
+                        rotate: "360deg",
+                        animation: "spin 1s linear infinite", // Define the animation using keyframes
+                      }}
+                      className="  px-8 py-2 mt-4 mx-10 "
+                    >
+                      <FaSpinner />
+                    </motion.div>
+                  )}
                 </div>
               </form>
             </div>
