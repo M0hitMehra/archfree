@@ -212,13 +212,31 @@ const NavBar = () => {
           }`}>
             <div className="triangle"></div>
           <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1">
-            Dropdown List 1
+          <Link
+            className={`link ${selectedItem === 1 ? "active" : ""}`}
+            to="/about"
+            onClick={() => setSelectItem(1)}
+          >
+            About Us
+          </Link>
           </li>
           <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1">
-            Dropdown List 2
+          <Link
+            className={`link ${selectedItem === 2 ? "active" : ""}`}
+            to="/team"
+            onClick={() => setSelectItem(2)}
+          >
+            Our Team
+          </Link>
           </li>
           <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1 ">
-            Dropdown List 3
+          <Link
+            className={`link ${selectedItem === 3 ? "active" : ""}`}
+            to="/career"
+            onClick={() => setSelectItem(3)}
+          >
+            Career
+          </Link>
           </li>
         </ul>
 
