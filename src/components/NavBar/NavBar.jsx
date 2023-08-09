@@ -11,7 +11,7 @@ const NavBar = () => {
   const [scrolling, setScrolling] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false); // Add this state variable
   const [open, setOpen] = useState(false);
-  const items = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+  const items = ['About to Secure Hires', 'Our Mission/Vision', ' Our Development Process'];
   const [isOpen, setIsOpen] = useState(false);
   
     const toggleDropdown = () => {
@@ -212,31 +212,13 @@ const NavBar = () => {
           }`}>
             <div className="triangle"></div>
           <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1">
-          <Link
-            className={`link ${selectedItem === 1 ? "text-red" : ""}`}
-            to="/about"
-            onClick={() => setSelectItem(1)}
-          >
-            About Us
-          </Link>
+            About to Secure Hires
           </li>
           <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1">
-          <Link
-            className={`link ${selectedItem === 2 ? "active" : ""}`}
-            to="/team"
-            onClick={() => setSelectItem(2)}
-          >
-            Our Team
-          </Link>
+           Our Mission/Vision
           </li>
           <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1 ">
-          <Link
-            className={`link ${selectedItem === 3 ? "active" : ""}`}
-            to="/career"
-            onClick={() => setSelectItem(3)}
-          >
-            Career
-          </Link>
+           Our Development Process
           </li>
         </ul>
 
