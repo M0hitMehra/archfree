@@ -55,7 +55,7 @@ const Career = () => {
               CAREER
             </p>
           </div>
-          <div className="flex flex-wrap carrer_col">
+          <div className="flex  carrer_col">
             <div className={`blog-post  border-${open ===1 ?"2":"0"} accord__conatiner border-gray rounded  max-w-lg  w-full `}>
               <Accordion open={open === 1} icon={<Icon id={1} open={open} />} className=" ">
                 <AccordionHeader onClick={() => handleOpen(1)} className={` accor__header  p-8  border-${open !==1 ?"2":"0"} `} >
