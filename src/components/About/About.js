@@ -232,7 +232,7 @@ const About = () => {
             ref={leftColumnRef}
           >
             <h3 className="text-3xl font-bold  text-white mt-8">
-              ABOUT TO ARCHER
+              ABOUT TO SECURE HIRES
             </h3>
             <p className="text-slate-400  font-medium mt-6">
               The Archer Technology is leading software development company in

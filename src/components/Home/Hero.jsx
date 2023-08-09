@@ -25,7 +25,7 @@ const Hero = () => {
                 initial="hidden"
                 animate="visible"
               >
-                WELCOME TO Secure Hires
+                WELCOME TO SECURE HIRES
                 <span className="text-[#ffc451]">.</span>
               </motion.div>
               <motion.h2

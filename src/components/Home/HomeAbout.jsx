@@ -53,7 +53,7 @@ const HomeAbout = () => {
             ref={leftColumnRef} // Attach the ref to the element
           >
             <h3 className="font-bold text-2xl xl:text-4xl text-slate-400">
-              ABOUT TO Secure Hires
+              ABOUT TO SECURE HIRES
             </h3>
             <p className="font-semibold text-md  xl:text-xl mt-4 text-slate-200" style={{
               lineHeight: "50px",
