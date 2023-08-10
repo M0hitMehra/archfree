@@ -223,7 +223,7 @@ const Services = () => {
                 handleOpenModal(arr[0].image, arr[0].title, arr[0].content)
               }
             >
-              <div className=" h-24 w-24 p-1 flex items-center rounded-lg  justify-center bg-yellow-400 ">
+              <div className=" h-24 w-24 p-1 flex items-center rounded-lg  justify-center bg-yellow-400 " id="web_development">
                 <img src={arr[0].image} alt="Web Development" className="   " />
               </div>
               <div className="flex flex-col gap-4">
@@ -236,7 +236,7 @@ const Services = () => {
 
             {/* Service 2  */}
             <motion.div
-              className="bg-[#ffeeec]  md:h-[30rem] md:w-[8rem] md:p-5   py-8  flex flex-col text-black justify-evenly items-center  gap-2 p-2 xl:p-4 rounded-lg grow xl:h-[24rem] xl:w-[4rem] text-center"
+              className="bg-[#ffeeec]  md:h-[30rem] md:w-[8rem] md:p-5   py-8  flex flex-col text-black justify-evenly items-center  gap-2 p-2 xl:p-4 rounded-lg grow xl:h-[24rem] xl:w-[4rem] text-center" 
               variants={sections2}
               animate={sectionAnimation2} // Use the animation controls
               whileHover={{
@@ -250,7 +250,7 @@ const Services = () => {
                 handleOpenModal(arr[1].image, arr[1].title, arr[1].content)
               }
             >
-              <div className=" h-24 w-24 p-1 flex items-center rounded-lg  justify-center bg-yellow-400 ">
+              <div className=" h-24 w-24 p-1 flex items-center rounded-lg  justify-center bg-yellow-400 " id="Digital_Marketing">
                 <img
                   src={arr[1].image}
                   alt="Digital Marketing"
@@ -281,7 +281,7 @@ const Services = () => {
                 handleOpenModal(arr[2].image, arr[2].title, arr[2].content)
               }
             >
-              <div className=" h-24 w-24 p-1 flex rounded-lg  items-center justify-center bg-yellow-400 ">
+              <div className=" h-24 w-24 p-1 flex rounded-lg  items-center justify-center bg-yellow-400 " id="Graphic_Designing">
                 <img src={arr[2].image} alt="Graphics Design" className="   " />
               </div>
               <div className="flex flex-col gap-4">
@@ -310,7 +310,7 @@ const Services = () => {
                 handleOpenModal(arr[3].image, arr[3].title, arr[3].content)
               }
             >
-              <div className="h-24 w-24 p-1 bg-yellow-400 flex rounded-lg justify-center items-center ">
+              <div className="h-24 w-24 p-1 bg-yellow-400 flex rounded-lg justify-center items-center " id="App_development">
                 <img
                   src={arr[3].image}
                   alt="Mobile Apps Development"
@@ -341,7 +341,7 @@ const Services = () => {
               }
             >
               {" "}
-              <div className="h-24 w-24 p-1 bg-yellow-400 flex rounded-lg justify-center items-center ">
+              <div className="h-24 w-24 p-1 bg-yellow-400 flex rounded-lg justify-center items-center " id="Software_development">
                 <img
                   src={arr[4].image}
                   alt="Software Development"

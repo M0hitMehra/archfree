@@ -1,8 +1,11 @@
 import React from "react";
 import { IoLogoFacebook } from "react-icons/io";
+
 import { IoLogoLinkedin } from "react-icons/io";
 import { IoLogoTwitter } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
+// import { IoLogoInstagram } from "react-icons/io";
+import { IoIosArrowDropright } from "react-icons/io";
 import logo  from "../../assets/logoArch.png"
 
 const Footer = () => {
@@ -13,15 +16,15 @@ const Footer = () => {
           <div className="flex flex-col mt-6 mb-8 md:mt-14 md:mb-0">
             <img
               src={logo}
-              className=" text-white w-24 h-24 mt-[-30px] text-lg md:text-2xl font-bold"
+              className=" text-white w-32 h-32 mt-[-30px] text-lg md:text-2xl font-bold"
             />{" "}
-            <p className="text-white mt-6">
+            {/* <p className="text-white mt-6">
               F-15, 1st Floor, Angel Lords Hotel, Old
               <br />
               Marketing Yard, Amreli, Gujarat, India,
               <br />
               365601
-            </p>
+            </p> */}
             <p className="text-white mt-4">Phone: +918849993525</p>
             <p className="text-white mt-4">
               Email: info@thearchertechnology.com
@@ -33,24 +36,25 @@ const Footer = () => {
               Quick Links
             </h1>
             <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoLogoTwitter className="text-xl md:text-2xl text-white mr-2 inline" />
-              Home
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
+               <a href="/">Home</a>
             </p>
             <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoLogoFacebook className="text-xl md:text-2xl text-white mr-2 inline" />
-              About Us
+            <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
+            <a href="/about">About Us</a>
             </p>
             <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoLogoInstagram className="text-xl md:text-2xl text-white mr-2 inline" />
-              Our Team
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
+              <a href="/team">Our Team</a>
             </p>
             <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoLogoLinkedin className="text-xl md:text-2xl text-white mr-2 inline" />
-              Contact Us
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
+             <a href="contact">Contact Us</a> 
             </p>
             <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoLogoTwitter className="text-xl md:text-2xl text-white mr-2 inline" />
-              Career
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
+            <a href="career">Career</a>  
+             
             </p>
           </div>
 
@@ -59,24 +63,24 @@ const Footer = () => {
               Our Services
             </h1>
             <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoLogoFacebook className="text-xl md:text-2xl text-white mr-2 inline" />
-              Web Development
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
+              <a href="#web_development">Web Development</a> 
             </p>
             <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoLogoInstagram className="text-xl md:text-2xl text-white mr-2 inline" />
-              App Development
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
+              <a href="#App_development">App Development</a> 
             </p>
             <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoLogoLinkedin className="text-xl md:text-2xl text-white mr-2 inline" />
-              Software Development
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
+              <a href="#Software_development">Software Development</a> 
             </p>
             <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoLogoTwitter className="text-xl md:text-2xl text-white mr-2 inline" />
-              Digital Marketing
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
+              <a href="#Digital_Marketing">Digital Marketing</a> 
             </p>
             <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoLogoInstagram className="text-xl md:text-2xl text-white mr-2 inline" />
-              Graphic Designing
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
+              <a href="#Graphic_Designing">Graphic Designing</a> 
             </p>
           </div>
 
