@@ -36,15 +36,15 @@ const Contact = () => {
     }
     emailjs
       .send(
-        "service_0tuqh8g",
-        "template_cvxfvdh",
+        "service_pboh51t",
+        "template_fyorqo9",
         {
           fullname,
           mobile,
           email,
           msg,
         },
-        "S_cbVajV-tGdqEUxa"
+        "SxjbDez0K89mKZo8r"
       )
       .then(function (response) {
         toast.success("Email sent successfully", {
@@ -170,7 +170,7 @@ const Contact = () => {
                   <div className="form-group w-full">
                     <input
                       type="email"
-                      className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
+                      className="form-control w-full p-2 text-black rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
                       name="email"
                       id="email"
                       placeholder="Your Email"

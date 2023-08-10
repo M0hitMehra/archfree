@@ -36,15 +36,15 @@ const HomeContact = () => {
     }
     emailjs
       .send(
-        "service_0tuqh8g",
-        "template_cvxfvdh",
+        "service_pboh51t",
+        "template_fyorqo9",
         {
           fullname,
           mobile,
           email,
           msg,
         },
-        "S_cbVajV-tGdqEUxa"
+        "SxjbDez0K89mKZo8r"
       )
       .then(function (response) {
         toast.success("Email sent successfully", {
@@ -86,35 +86,8 @@ const HomeContact = () => {
           </p>
         </div>
 
-        {/* <div className="">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7419.02598295401!2d71.2269608977129!3d21.6049250781877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395880c5a8ae72db%3A0x3367f8679c1c86eb!2sAngel%20Lords%20Eco%20Inn%20Amreli!5e0!3m2!1sen!2sin!4v1670677249636!5m2!1sen!2sin"
-            width="100%"
-            height="300"
-            style={{ border: "0" }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div> */}
-
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 mt-6 ">
           <div className="info xl:col-span-4 h-auto flex flex-col justify-evenly gap-7">
-            {/* <div className="address flex items-center gap-4 ">
-              <div className="bg-yellow-400 px-3 py-1 rounded-md mt-[-40px]">
-                <CiLocationOn className="text-black h-8 w-4" />
-              </div>
-              <div>
-                <h4 className="text-lg xl:text-2xl font-[raleway] font-medium text-gray-200">
-                  Location:
-                </h4>
-                <p className="text-sm xl:text-base text-gray-300 mt-2">
-                  F-15, 1st Floor, Angel Lords Hotel, Old Marketing Yard,
-                  Amreli, Gujarat, India, 365601
-                </p>
-              </div>
-            </div> */}
-
             <div className="email flex items-center gap-4 ">
               <div className="bg-yellow-400 px-3 py-1 rounded-md">
                 <BsPhone className="text-black h-8 w-4" />
@@ -157,7 +130,7 @@ const HomeContact = () => {
                   <input
                     type="text"
                     name="fullname"
-                    className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm xl:text-base"
+                    className="form-control text-black w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm xl:text-base"
                     id="name"
                     placeholder="Your Name"
                     required
@@ -203,26 +176,26 @@ const HomeContact = () => {
               </div>
 
               <div className="text-center">
-                  {!sendClick ? (
-                    <input
-                      type="submit"
-                      value={"Send"}
-                      id="save"
-                      className="btn  px-8 py-2 mt-4 mx-10  bg-yellow-500  hover:bg-yellow-400  rounded-md text-black"
-                    />
-                  ) : (
-                    <motion.div
-                      style={{
-                        display: "inline-block",
-                        rotate: "360deg",
-                        animation: "spin 1s linear infinite", // Define the animation using keyframes
-                      }}
-                      className="  px-8 py-2 mt-4 mx-10 "
-                    >
-                      <FaSpinner />
-                    </motion.div>
-                  )}
-                </div>
+                {!sendClick ? (
+                  <input
+                    type="submit"
+                    value={"Send"}
+                    id="save"
+                    className="btn  px-8 py-2 mt-4 mx-10  bg-yellow-500  hover:bg-yellow-400  rounded-md text-black"
+                  />
+                ) : (
+                  <motion.div
+                    style={{
+                      display: "inline-block",
+                      rotate: "360deg",
+                      animation: "spin 1s linear infinite", // Define the animation using keyframes
+                    }}
+                    className="  px-8 py-2 mt-4 mx-10 "
+                  >
+                    <FaSpinner />
+                  </motion.div>
+                )}
+              </div>
             </form>
           </div>
         </div>

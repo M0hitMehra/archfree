@@ -62,7 +62,13 @@ const Career = () => {
     e.preventDefault();
     setSendClick(true);
     // console.log(sendClick);
-    if (!firstname || !lastname || !email || !phone_number || !Position || !file_input) {
+    if (
+      !firstname ||
+      !lastname ||
+      !email ||
+      !phone_number ||
+      !Position  
+     ) {
       toast.error("Error, Please fill all the required input", {
         position: "top-right",
         autoClose: 5000,
@@ -79,20 +85,19 @@ const Career = () => {
     }
     emailjs
       .send(
-        "service_0tuqh8g",
-        "template_cvxfvdh",
+        "service_pboh51t",
+        "template_81q42dl",
         {
           firstname,
           lastname,
           email,
           phone_number,
           Position,
-          file_input,
+          
         },
-        "S_cbVajV-tGdqEUxa"
+        "SxjbDez0K89mKZo8r"
       )
       .then(function (response) {
-
         toast.success("Email sent successfully", {
           position: "top-right",
           autoClose: 5000,
@@ -132,9 +137,22 @@ const Career = () => {
             </p>
           </div>
           <div className="flex  carrer_col">
-            <div className={`blog-post  border-${open ===1 ?"2":"0"} accord__conatiner border-gray rounded  max-w-lg  w-full `}>
-              <Accordion open={open === 1} icon={<Icon id={1} open={open} />} className=" ">
-                <AccordionHeader onClick={() => handleOpen(1)} className={` accor__header  p-8  border-${open !==1 ?"2":"0"} `} >
+            <div
+              className={`blog-post  border-${
+                open === 1 ? "2" : "0"
+              } accord__conatiner border-gray rounded  max-w-lg  w-full `}
+            >
+              <Accordion
+                open={open === 1}
+                icon={<Icon id={1} open={open} />}
+                className=" "
+              >
+                <AccordionHeader
+                  onClick={() => handleOpen(1)}
+                  className={` accor__header  p-8  border-${
+                    open !== 1 ? "2" : "0"
+                  } `}
+                >
                   <h3 className="text-white text-xl font-medium">
                     Business Development Executive <br />
                     <span className="relative right-16 experience">
@@ -142,7 +160,11 @@ const Career = () => {
                     </span>
                   </h3>
                 </AccordionHeader>
-                <AccordionBody className={`p-8  accord__conatiner__body  ${open!==1 ?"hidden":"visible"}`}>
+                <AccordionBody
+                  className={`p-8  accord__conatiner__body  ${
+                    open !== 1 ? "hidden" : "visible"
+                  }`}
+                >
                   <p className="text-white text-xl font-medium content hidden">
                     Number of vacancies:1
                   </p>
@@ -184,9 +206,13 @@ const Career = () => {
               </Accordion>
             </div>
             <div className="">
-              <form className="w-full max-w-lg border-2 border-gray rounded p-8 ml-10 carrer_form"  noValidate="novalidate"
-                onSubmit={applyformHandler} id="applyform"
-                role="form">
+              <form
+                className="w-full max-w-lg border-2 border-gray rounded p-8 ml-10 carrer_form"
+                noValidate="novalidate"
+                onSubmit={applyformHandler}
+                id="applyform"
+                role="form"
+              >
                 <h3 className="text-2xl font-bold text-white mb-2 ">
                   APPLY NOW
                 </h3>
@@ -200,9 +226,11 @@ const Career = () => {
                     </label>
                     <input
                       className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                      id="firstname" name="firstname"
+                      id="firstname"
+                      name="firstname"
                       type="text"
-                      placeholder="Jane" value={firstname}
+                      placeholder="Jane"
+                      value={firstname}
                       onChange={(e) => setFirstname(e.target.value)}
                     />
                   </div>
@@ -215,9 +243,11 @@ const Career = () => {
                     </label>
                     <input
                       className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="lastname" name="lastname"
+                      id="lastname"
+                      name="lastname"
                       type="text"
-                      placeholder="Doe" value={lastname}
+                      placeholder="Doe"
+                      value={lastname}
                       onChange={(e) => setLastname(e.target.value)}
                     />
                   </div>
@@ -235,7 +265,8 @@ const Career = () => {
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="xyz@gmail.com" value={email}
+                      placeholder="xyz@gmail.com"
+                      value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
@@ -251,8 +282,10 @@ const Career = () => {
                     <input
                       className=" block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 [&::-webkit-inner-spin-button]:appearance-none"
                       id="phone_number"
-                      type="number" name="phone_number"
-                      placeholder="Phone number" value={phone_number}
+                      type="number"
+                      name="phone_number"
+                      placeholder="Phone number"
+                      value={phone_number}
                       onChange={(e) => setPhone(e.target.value)}
                     />
                   </div>
@@ -268,7 +301,9 @@ const Career = () => {
                     <div className="relative">
                       <select
                         className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="Position" name="Position" value={Position}
+                        id="Position"
+                        name="Position"
+                        value={Position}
                         onChange={(e) => setPosition(e.target.value)}
                       >
                         <option>Select Position</option>
@@ -297,20 +332,25 @@ const Career = () => {
                     </label>
                     <input
                       className="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="file_input" name="file_input"
-                      type="file" value={file_input}
+                      id="file_input"
+                      name="file_input"
+                      type="file"
+                      value={file_input}
                       onChange={(e) => setFile(e.target.value)}
                     />
                   </div>
                 </div>
                 <div className="text-center mt-4 flex justify-end ">
-                {!sendClick ? (<button
-                    id="save"  type="submit"
-                    value={"Send"}
-                    className="btn bg-yellow-500 hover:bg-yellow-400 px-4 py-3 rounded-md text-black text-xl font-medium"
-                  >
-                    Apply Now
-                  </button>) : (
+                  {!sendClick ? (
+                    <button
+                      id="save"
+                      type="submit"
+                      value={"Send"}
+                      className="btn bg-yellow-500 hover:bg-yellow-400 px-4 py-3 rounded-md text-black text-xl font-medium"
+                    >
+                      Apply Now
+                    </button>
+                  ) : (
                     <motion.div
                       style={{
                         display: "inline-block",
