@@ -62,13 +62,7 @@ const Career = () => {
     e.preventDefault();
     setSendClick(true);
     // console.log(sendClick);
-    if (
-      !firstname ||
-      !lastname ||
-      !email ||
-      !phone_number ||
-      !Position  
-     ) {
+    if (!firstname || !lastname || !email || !phone_number || !Position) {
       toast.error("Error, Please fill all the required input", {
         position: "top-right",
         autoClose: 5000,
@@ -93,7 +87,6 @@ const Career = () => {
           email,
           phone_number,
           Position,
-          
         },
         "SxjbDez0K89mKZo8r"
       )
