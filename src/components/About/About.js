@@ -223,7 +223,11 @@ const About = () => {
           <h1 className="text-white text-xl font-medium">ABOUT US</h1>
           <hr className="border-1 border-amber-500  drop-shadow-xl w-48 ml-3"></hr>
         </motion.div>
-        <div className=" flex justify-between about_section1 ">
+
+
+
+
+        <div className=" flex justify-between about_section1 " id="about1" >
           <motion.div
             className="About_text"
             variants={leftColumnVariants}
@@ -260,6 +264,7 @@ const About = () => {
               company.
             </p>
           </motion.div>
+
           <motion.div
             className="About_image  mt-10"
             variants={rightColumnVariants}
@@ -275,7 +280,11 @@ const About = () => {
           </motion.div>
         </div>
 
-        <div className="about_section_2 flex justify-between mt-20">
+
+
+
+
+        <div className="about_section_2 flex justify-between mt-20" id="about2">
           <motion.div
             className="img_about"
             variants={missionVariant}
@@ -289,6 +298,7 @@ const About = () => {
               className="max-w-[100%] h-auto"
             />
           </motion.div>
+
           <motion.div
             className="text_about"
             variants={visionVariant}
@@ -322,7 +332,12 @@ const About = () => {
           </motion.div>
         </div>
 
-        <div className="flex justify-center items-center mt-20 flex-col">
+
+
+
+
+
+        <div className="flex justify-center items-center mt-20 flex-col" id="about3">
           <motion.h1
             className="text-5xl font-bold flex text-white about_section3_text"
             variants={containerVariants}

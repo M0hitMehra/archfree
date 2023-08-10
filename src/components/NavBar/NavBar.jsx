@@ -35,6 +35,12 @@ const NavBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  function handleScrollto(event) {
+    event.preventDefault();
+    const about3 = document.getElementById('about3');
+    about3.scrollIntoView({ behavior: 'smooth' });
+  }
   return (
     <div
       className={`navbar fixed z-10 md:w-full w-screen mb-[5rem] ${
@@ -211,9 +217,9 @@ const NavBar = () => {
             open ? "block" : "hidden"
           }`}>
             <div className="triangle"></div>
-          <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1">
+          <a href="#about3"   onClick={handleScrollto} className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1">
             About to Secure Hires
-          </li>
+          </a>
           <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1">
            Our Mission/Vision
           </li>
