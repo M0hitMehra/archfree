@@ -54,7 +54,7 @@ const Career = () => {
   const [email, setEmail] = useState();
   const [phone_number, setPhone] = useState();
   const [Position, setPosition] = useState();
-  const [file_input, setFile] = useState();
+  const [url, seturl] = useState();
 
   const [sendClick, setSendClick] = useState(false);
 
@@ -321,15 +321,15 @@ const Career = () => {
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                       htmlFor="file_input"
                     >
-                      Resume
+                      Resume Url
                     </label>
                     <input
                       className="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="file_input"
-                      name="file_input"
-                      type="file"
-                      value={file_input}
-                      onChange={(e) => setFile(e.target.value)}
+                      id="url"
+                      name="url"
+                      type="text"
+                      value={url}
+                      onChange={(e) => seturl(e.target.value)}
                     />
                   </div>
                 </div>
