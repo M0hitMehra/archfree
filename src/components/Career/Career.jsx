@@ -328,7 +328,7 @@ const Career = () => {
                       id="url"
                       name="url"
                       type="text"
-                      value={url}
+                      value={url} placeholder="Resume Url"
                       onChange={(e) => seturl(e.target.value)}
                     />
                   </div>

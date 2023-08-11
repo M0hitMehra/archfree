@@ -1,22 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
-import logo  from "../../assets/logoArch.png"
-
+import logo from "../../assets/logoArch.png";
 
 const NavBar = () => {
   const [selectedItem, setSelectItem] = useState(0);
   const [scrolling, setScrolling] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false); // Add this state variable
   const [open, setOpen] = useState(false);
-  // const items = ['About to Secure Hires', 'Our Mission/Vision', ' Our Development Process'];
-  // const [isOpen, setIsOpen] = useState(false);
-  
-    // const toggleDropdown = () => {
-    //   setIsOpen(!isOpen);
-    // };
+  const items = [
+    "About to Secure Hires",
+    "Our Mission/Vision",
+    " Our Development Process",
+  ];
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
   useEffect(() => {
     const handleScroll = () => {
       // Add a scroll event listener and update the "scrolling" state
@@ -35,6 +38,27 @@ const NavBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const navigate = useNavigate();
+
+  const navigateToAbout = async () => {
+    return new Promise((resolve) => {
+      navigate("/about");
+      resolve();
+    });
+  };
+
+  function handleScrollto(event, target) {
+    event.preventDefault();
+    navigateToAbout()
+      .then(() => {
+        const about3 = document.getElementById(target);
+        about3.scrollIntoView({ behavior: "smooth" });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
   return (
     <div
       className={`navbar fixed z-10 md:w-full w-screen mb-[5rem] ${
@@ -43,7 +67,11 @@ const NavBar = () => {
     >
       <nav className="flex justify-between items-center  bg-[#0e1629] h-[4rem] px-4 md:px-24 py-3 md:py-4">
         <div className="logo text-white flex items-center justify-center text-lg md:text-2xl font-bold">
-          <img src={logo} className=" logo-img w-20  hover:scale-110 h-20 rounded-3xl" alt="" />
+          <img
+            src={logo}
+            className=" logo-img w-20  hover:scale-110 h-20 rounded-3xl"
+            alt=""
+          />
         </div>
         <div className="md:hidden">
           {/* Mobile Menu */}
@@ -58,7 +86,7 @@ const NavBar = () => {
             </button>
           )}
 
-          {!menuOpen &&
+          {!menuOpen && (
             <button
               className={`text-white focus:outline-none ${
                 menuOpen ? "rotate-90	" : ""
@@ -67,7 +95,7 @@ const NavBar = () => {
             >
               <GiHamburgerMenu />
             </button>
-          }
+          )}
           <div
             className={`${
               menuOpen ? "block" : "hidden"
@@ -97,7 +125,59 @@ const NavBar = () => {
                 setMenuOpen(false);
               }}
             >
-              About Us
+              <div className="relative">
+                <button
+                  onClick={toggleDropdown}
+                  className="flex items-center justify-between"
+                >
+                  {" "}
+                  About Us
+                  {isOpen ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 ml-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 15l7-7 7 7"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 ml-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  )}
+                </button>
+
+                {isOpen && (
+                  <ul className="absolute mt-2 w-40 bg-white border border-gray-300 rounded-md shadow-lg">
+                    {items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="px-4 py-2 text-gray-800 hover:bg-gray-100 cursor-pointer"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </Link>
             <Link
               className={`block text-white py-2 px-6 ${
@@ -149,30 +229,37 @@ const NavBar = () => {
           <Link
             className={`link ${selectedItem === 1 ? "active" : ""} relative `}
             to="/about"
-            onMouseLeave={() => setOpen(false)} onClick={() => setSelectItem(1)}
+            onMouseLeave={() => setOpen(false)}
+            onClick={() => setSelectItem(1)}
           >
-             <button
-          onMouseOver={() => setOpen(true)}
-          className=""
-        >
-          <span className="">About Us</span>
-        </button>
-        <ul
-          className={`absolute w-40 py-2 bg-white text-black mt-1  rounded-lg shadow-xl ${
-            open ? "block" : "hidden"
-          }`}>
-            <div className="triangle"></div>
-          <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1">
-            About to Secure Hires
-          </li>
-          <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1">
-           Our Mission/Vision
-          </li>
-          <li className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1 ">
-           Our Development Process
-          </li>
-        </ul>
-
+            <button onMouseOver={() => setOpen(true)} className="">
+              <span className="">About Us</span>
+            </button>
+            <ul
+              className={`absolute w-40 py-2 bg-white text-black mt-1  rounded-lg shadow-xl ${
+                open ? "block" : "hidden"
+              }`}
+            >
+              <div className="triangle"></div>
+              <li
+                onClick={(e) => handleScrollto(e, "about1")}
+                className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1"
+              >
+                About to Secure Hires
+              </li>
+              <li
+                onClick={(e) => handleScrollto(e, "about2")}
+                className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1"
+              >
+                Our Mission/Vision
+              </li>
+              <li
+                onClick={(e) => handleScrollto(e, "about3")}
+                className="flex w-full items-center px-3 py-2 text-sm hover:bg-gray-100 mt-1 "
+              >
+                Our Development Process
+              </li>
+            </ul>
           </Link>
           <Link
             className={`link ${selectedItem === 2 ? "active" : ""}`}
