@@ -159,7 +159,7 @@ const Contact = () => {
                     <input
                       type="text"
                       name="fullname"
-                      className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
+                      className="form-control w-full p-2 text-black rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm md:text-base"
                       id="name"
                       placeholder="Your Name"
                       required
