@@ -121,18 +121,7 @@ const NavBar = () => {
             >
               About Us
             </Link>
-            <Link
-              className={`block text-white py-2 px-6 ${
-                selectedItem === 2 ? "bg-[#ffc451]" : ""
-              }`}
-              to="/team"
-              onClick={() => {
-                setSelectItem(2);
-                setMenuOpen(false);
-              }}
-            >
-              Our Team
-            </Link>
+
             <Link
               className={`block text-white py-2 px-6 ${
                 selectedItem === 2 ? "bg-[#ffc451]" : ""
