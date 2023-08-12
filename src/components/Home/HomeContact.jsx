@@ -58,6 +58,10 @@ const HomeContact = () => {
           theme: "light",
         });
         setSendClick(false);
+        setMobile("")
+        setFullname("")
+        setEmail("")
+        setMsg("")
       })
       .catch((err) => {
         setSendClick(false);
@@ -141,7 +145,7 @@ const HomeContact = () => {
                 <div className="form-group w-full">
                   <input
                     type="email"
-                    className="form-control w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm xl:text-base"
+                    className="form-control  text-black w-full p-2 rounded-md border-2 border-blue-400 focus:border-bg-400 focus:outline-blue-500 text-sm xl:text-base"
                     name="email"
                     id="email"
                     placeholder="Your Email"
