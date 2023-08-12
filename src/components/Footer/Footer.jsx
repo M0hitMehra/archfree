@@ -1,6 +1,6 @@
 import React from "react";
 import { IoLogoFacebook } from "react-icons/io";
-
+import { useNavigate } from "react-router-dom";
 import { IoLogoLinkedin } from "react-icons/io";
 import { IoLogoTwitter } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
@@ -9,6 +9,28 @@ import { IoIosArrowDropright } from "react-icons/io";
 import logo  from "../../assets/logoArch.png"
 
 const Footer = () => {
+
+  const navigate = useNavigate();
+
+  const navigateToAbout = async () => {
+    return new Promise((resolve) => {
+      navigate("/");
+      resolve();
+    });
+  };
+
+  function handleScrollto(event, target) {
+    event.preventDefault();
+    navigateToAbout()
+      .then(() => {
+        const Graphic_Designing = document.getElementById(target);
+        Graphic_Designing.scrollIntoView({ behavior: "smooth" });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
   return (
     <div>
       <footer className="bg-[#0e1629] md:p-1 p-3">
@@ -62,25 +84,25 @@ const Footer = () => {
             <h1 className="text-white text-lg md:text-2xl font-bold">
               Our Services
             </h1>
-            <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
-              <a href="#web_development">Web Development</a> 
+            <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer" onClick={(e) => handleScrollto(e, "App_development")}>
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline"/>
+              Web Development 
             </p>
-            <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
-              <a href="#App_development">App Development</a> 
+            <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer" onClick={(e) => handleScrollto(e, "App_development")}>
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline"/>
+              App Development
             </p>
-            <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
-              <a href="#Software_development">Software Development</a> 
+            <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer" onClick={(e) => handleScrollto(e, "Software_development")}>
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline"/>
+             Software Development 
             </p>
-            <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
-              <a href="#Digital_Marketing">Digital Marketing</a> 
+            <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer" onClick={(e) => handleScrollto(e, "Digital_Marketing")}>
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline"/>
+              Digital Marketing 
             </p>
-            <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer">
-              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline" />
-              <a href="#Graphic_Designing">Graphic Designing</a> 
+            <p className="text-white mt-4 hover:text-yellow-400 cursor-pointer" onClick={(e) => handleScrollto(e, "Graphic_Designing")}>
+              <IoIosArrowDropright className="text-xl md:text-2xl text-white mr-2 inline"/>
+              Graphic Designing 
             </p>
           </div>
 
